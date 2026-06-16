@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/ll_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="专科及本科" />
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="研究生" />
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="通用教务" />
+    </com.google.android.material.tabs.TabLayout>
+    <RelativeLayout android:id="@id/relative_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.bigkoo.quicksidebar.QuickSideBarView android:id="@id/quickSideBarView" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_alignParentEnd="true" app:sidebarItemHeight="16.0dip" app:sidebarTextColor="?colorControlNormal" app:sidebarTextColorChoose="?colorPrimary" app:sidebarTextSize="11.0sp" app:sidebarTextSizeChoose="12.0sp" />
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

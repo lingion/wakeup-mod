@@ -1,0 +1,17 @@
+.class public Lcom/kwad/components/core/innerEc/followuser/FollowUserResultData;
+.super Lcom/kwad/sdk/core/response/model/BaseResultData;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/kwad/sdk/core/response/model/BaseResultData;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method

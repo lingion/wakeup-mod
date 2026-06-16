@@ -1,0 +1,111 @@
+.class final synthetic Lio/ktor/http/content/MultipartKt$sam$kotlinx_coroutines_flow_FlowCollector$0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlinx/coroutines/flow/OooO;
+.implements Lkotlin/jvm/internal/OooOo;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/ktor/http/content/MultipartKt;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field private final synthetic function:Lkotlin/jvm/functions/Function2;
+
+
+# direct methods
+.method constructor <init>(Lkotlin/jvm/functions/Function2;)V
+    .locals 1
+
+    const-string v0, "function"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/o0OoOo0;->OooO0oO(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lio/ktor/http/content/MultipartKt$sam$kotlinx_coroutines_flow_FlowCollector$0;->function:Lkotlin/jvm/functions/Function2;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic emit(Ljava/lang/Object;Lkotlin/coroutines/OooO;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lio/ktor/http/content/MultipartKt$sam$kotlinx_coroutines_flow_FlowCollector$0;->function:Lkotlin/jvm/functions/Function2;
+
+    invoke-interface {v0, p1, p2}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Lkotlinx/coroutines/flow/OooO;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    instance-of v0, p1, Lkotlin/jvm/internal/OooOo;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Lkotlin/jvm/internal/OooOo;->getFunctionDelegate()Lkotlin/OooOO0O;
+
+    move-result-object v0
+
+    check-cast p1, Lkotlin/jvm/internal/OooOo;
+
+    invoke-interface {p1}, Lkotlin/jvm/internal/OooOo;->getFunctionDelegate()Lkotlin/OooOO0O;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/o0OoOo0;->OooO0O0(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final getFunctionDelegate()Lkotlin/OooOO0O;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/OooOO0O;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lio/ktor/http/content/MultipartKt$sam$kotlinx_coroutines_flow_FlowCollector$0;->function:Lkotlin/jvm/functions/Function2;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-interface {p0}, Lkotlin/jvm/internal/OooOo;->getFunctionDelegate()Lkotlin/OooOO0O;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method

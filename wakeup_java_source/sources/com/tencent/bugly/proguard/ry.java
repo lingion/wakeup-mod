@@ -1,0 +1,6 @@
+package com.tencent.bugly.proguard;
+
+/* loaded from: classes3.dex */
+public interface ry {
+    void y(long j);
+}

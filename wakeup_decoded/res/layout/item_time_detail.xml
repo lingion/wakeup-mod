@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:paddingEnd="16.0dip" style="@style/settings_item_ll">
+        <com.google.android.material.textview.MaterialTextView android:id="@id/tv_time_name" android:text="第 1 节" style="@style/settings_item_tv_main" />
+        <com.google.android.material.textview.MaterialTextView android:layout_gravity="center_vertical" android:id="@id/tv_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08:00" />
+        <com.google.android.material.textview.MaterialTextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" - " />
+        <com.google.android.material.textview.MaterialTextView android:layout_gravity="center_vertical" android:id="@id/tv_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08:50" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

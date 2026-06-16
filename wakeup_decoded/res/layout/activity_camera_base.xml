@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/camera_root" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:gravity="center" android:orientation="vertical" android:id="@id/preview" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/camera_control_bar" />
+    <com.zybang.camera.view.CustomCameraCornerView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/camera_base_bottom_height" />
+    <com.zybang.camera.view.TakeingPhotoFakeView android:id="@id/take_photo_fake_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/cacmq_root" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/cacmq_blur_bitmap" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    </FrameLayout>
+    <com.zybang.blur.widget.BlurView android:id="@id/camera_blur_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zybang.camera.view.CameraScanLayout android:id="@id/camera_focus_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/camera_control_bar" />
+    <FrameLayout android:id="@id/shutter_cover" android:background="@color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zybang.camera.view.CameraGuideLineView android:id="@id/camera_activity_guide_line_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/camera_base_bottom_height" android:layout_above="@id/camera_control_bar" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/camera_activity_guide_user_id_photo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/camera_control_bar">
+        <ImageView android:id="@id/camera_activity_guide_user_id_photo_iv" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" android:src="@drawable/common_camera_guide_user_id_photo" android:layout_centerVertical="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="H,979:978" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/c2_1" android:gravity="center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请将面部置于头像框内" android:shadowColor="#80000000" android:shadowDx="0.0" android:shadowDy="2.0" android:shadowRadius="6.0" android:lineSpacingExtra="4.799988dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/camera_activity_guide_user_id_photo_iv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout android:id="@id/camera_content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/camera_base_bottom_height" android:layout_above="@id/camera_control_bar">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/cacmq_level_guide" android:background="@drawable/sdk_camera_search_orientation_guide" android:visibility="gone" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_centerInParent="true" />
+        <com.zybang.camera.view.RotateAnimTextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/camera_fl_ask_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:shadowColor="#a3000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:layout_centerInParent="true" />
+        <FrameLayout android:id="@id/custom_camera_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <ImageView android:id="@id/focus_image" android:visibility="gone" android:layout_width="55.0dip" android:layout_height="55.0dip" android:src="@drawable/sdk_camera_focus_success" android:scaleType="centerInside" />
+    <com.zybang.camera.view.CameraBottomOperationView android:id="@id/camera_buttom_operation_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/iv_guide_bubble" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="120.5dip" android:src="@drawable/icon_new_function_translate" android:layout_alignParentBottom="true" />
+    <com.zybang.camera.view.CameraViewControlLayout android:id="@id/camera_camera_control_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/correct_en_fl" android:background="@drawable/sdk_camera_bubble_guide_bg" android:paddingBottom="4.5dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="end|center" android:id="@id/correct_en_tip_close" android:layout_width="40.0dip" android:layout_height="35.0dip" android:layout_marginEnd="15.0dip" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/iv_logo" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="24.0dip" />
+    <com.google.android.material.textview.MaterialTextView android:textSize="12.0sp" android:gravity="center_horizontal" android:autoLink="web" android:paddingLeft="48.0dip" android:paddingRight="48.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="咩咩\n一个简单的待重构的纪念日、倒数日App\n有丰富的桌面小部件样式\n迟些时间将会集成到课程表\n本项目开源  欢迎star和fork\nhttps://github.com/YZune/YoungCommemoration_Kotlin" android:lineSpacingExtra="8.0dip" />
+    <com.google.android.material.button.MaterialButton android:textSize="12.0sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:id="@id/tv_download" android:layout_width="160.0dip" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="前去下载" style="@style/Widget.Material3.Button.UnelevatedButton" />
+</androidx.appcompat.widget.LinearLayoutCompat>

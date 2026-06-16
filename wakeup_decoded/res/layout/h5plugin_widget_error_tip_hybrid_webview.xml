@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zuoyebang.widget.CacheHybridWebView android:id="@id/widget_error_tip_hybridwebview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/widget_error_tip_loading" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:indeterminateDrawable="@drawable/default_loading_anim_black" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/widget_error_tip_load_fail" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/common_iv_listview_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff666666" android:gravity="center" android:id="@id/tv_unified_background_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="45.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="45.0dip" android:text="哎，网络断片了" android:lineSpacingExtra="3.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

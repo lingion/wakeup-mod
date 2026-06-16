@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:id="@id/tv_item_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" />
+    <TextView android:textColor="#ff9da0a3" android:id="@id/tv_last_item_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="色情低俗，内容质量差等 >" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

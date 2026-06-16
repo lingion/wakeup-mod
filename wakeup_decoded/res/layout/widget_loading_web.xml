@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zuoyebang.widget.CacheHybridWebView android:id="@id/cache_webview" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout android:id="@id/ani_web_loading_container" android:background="@drawable/bg_global_dialog" android:layout_width="60.0dip" android:layout_height="60.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.suda.yzune.wakeupschedule.aaa.widget.SecureLottieAnimationView android:id="@id/ani_web_loading" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="centerCrop" android:layout_centerInParent="true" app:lottie_autoPlay="true" app:lottie_fileName="anim/web_loading/ani_web_loading.json" app:lottie_imageAssetsFolder="anim/web_loading/images" app:lottie_loop="true" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

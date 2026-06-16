@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/user_publish_image_ll" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rv_ll_row_one" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/recycleimageview_one" android:layout_width="fill_parent" android:layout_height="90.5dip" android:layout_marginRight="4.0dip" android:layout_weight="1.0" app:corner_top_left_radius="8.0dip" />
+        <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/recycleimageview_two" android:layout_width="fill_parent" android:layout_height="106.5dip" android:layout_marginRight="4.0dip" android:layout_weight="1.0" />
+        <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/recycleimageview_three" android:layout_width="fill_parent" android:layout_height="106.5dip" android:layout_weight="1.0" app:corner_top_right_radius="8.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/rv_ll_row_two" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/recycleimageview_four" android:layout_width="fill_parent" android:layout_height="106.5dip" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_weight="1.0" app:corner_bottom_left_radius="8.0dip" />
+        <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/recycleimageview_five" android:layout_width="fill_parent" android:layout_height="106.5dip" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_weight="1.0" />
+        <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/recycleimageview_six" android:layout_width="fill_parent" android:layout_height="106.5dip" android:layout_marginTop="4.0dip" android:layout_weight="1.0" app:corner_bottom_right_radius="8.0dip" />
+    </LinearLayout>
+    <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/supiei_big_image_one" android:visibility="gone" android:layout_width="215.0dip" android:layout_height="215.0dip" android:layout_marginRight="4.0dip" android:scaleType="centerCrop" android:layout_weight="1.0" app:corner_bottom_left_radius="8.0dip" app:corner_top_left_radius="8.0dip" />
+</LinearLayout>

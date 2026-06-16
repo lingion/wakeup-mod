@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/reward_dialog_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip">
+        <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#ff621200" android:id="@id/id_reward_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="52.0dip" android:text="距离奖励很近啦" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0dip" android:textColor="#ff621200" android:gravity="center" android:id="@id/id_reward_second_text" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_below="@id/id_reward_tips" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/id_reward_big_button" android:background="@drawable/reward_get_reward" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="17.0dip" android:text="继续领奖励" android:layout_below="@id/id_reward_second_text" android:layout_centerHorizontal="true" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+        <ImageView android:id="@id/id_reward_hand" android:visibility="gone" android:layout_width="68.0dip" android:layout_height="68.0dip" android:layout_marginTop="-45.0dip" android:src="@drawable/reward_hand" android:layout_below="@id/id_reward_big_button" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="14.0dip" android:textColor="#ff626466" android:id="@id/id_reward_small_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:text="放弃奖励" android:layout_below="@id/id_reward_big_button" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/id_reward_test" android:layout_width="175.0dip" android:layout_height="175.0dip" android:src="@drawable/reward_box" />
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.suda.yzune.wakeupschedule.aaa.activity.questionsearch.camera.widget.CustomCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/fl_search_app_bar_layout" android:background="@color/common_activity_background" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip" app:layout_behavior="@string/app_bar_behavior">
+        <FrameLayout android:id="@id/fl_search_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.suda.yzune.wakeupschedule.aaa.activity.questionsearch.camera.widget.SearchResultPager android:layout_gravity="center|bottom" android:id="@id/search_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/scrolling_view_behavior" />
+</com.suda.yzune.wakeupschedule.aaa.activity.questionsearch.camera.widget.CustomCoordinatorLayout>

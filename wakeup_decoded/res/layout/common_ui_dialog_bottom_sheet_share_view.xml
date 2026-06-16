@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/sheet_layout" android:background="@drawable/common_ui_dialog_bottom_sheet_share_shape_t_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/common_ui_dialog_sheet_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zuoyebang.design.title.CommonTitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height" app:rightImageResource="@drawable/nav_icon_delete_left" app:rightType="imageButton" app:titleBarColor="@android:color/transparent" />
+    <FrameLayout android:id="@id/content_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/common_ui_dialog_sheet_margin" />
+</LinearLayout>

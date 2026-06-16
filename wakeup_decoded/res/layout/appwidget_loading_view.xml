@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:id="@id/tv_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="若长时间显示这个界面\n请去系统设置中\n允许App自启和后台运行\n点击小部件右上角的箭头可以强制刷新" android:layout_centerInParent="true" />
+</RelativeLayout>

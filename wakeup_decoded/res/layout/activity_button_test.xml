@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="@drawable/uxc_button_selector_function_load_a" android:layout_width="fill_parent" android:layout_height="@dimen/uxc_button_height_40" android:layout_margin="5.0dip">
+            <com.zuoyebang.design.widget.refresh.UxcProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="20.0dip" android:layout_height="20.0dip" app:ringProgress="70" app:ringProgressColor="@color/uxc_btn_boarder_loaddinga" app:ringWidth="2.0dip" app:ringmax="100" />
+        </FrameLayout>
+        <FrameLayout android:background="@drawable/uxc_button_selector_function_load_b" android:layout_width="fill_parent" android:layout_height="@dimen/uxc_button_height_40" android:layout_margin="5.0dip">
+            <com.zuoyebang.design.widget.refresh.UxcProgressBar android:layout_gravity="center" android:id="@id/progress_bar1" android:layout_width="20.0dip" android:layout_height="20.0dip" app:ringProgress="70" app:ringProgressColor="@color/uxc_btn_boarder_loaddingb" app:ringWidth="2.0dip" app:ringmax="100" />
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="VIP C按钮" android:layout_weight="1.0" style="@style/BtnTypeVC" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="VIP C按钮" android:layout_weight="1.0" style="@style/BtnTypeVC" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeHB按钮" android:layout_weight="1.0" style="@style/BtnTypeHB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeHB按钮" android:layout_weight="1.0" style="@style/BtnTypeHB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeWB按钮" android:layout_weight="1.0" style="@style/BtnTypeWB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeWB按钮" android:layout_weight="1.0" style="@style/BtnTypeWB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeLA按钮" android:layout_weight="1.0" style="@style/BtnTypeLA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeLA按钮" android:layout_weight="1.0" style="@style/BtnTypeLA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeLB按钮" android:layout_weight="1.0" style="@style/BtnTypeLB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeLB按钮" android:layout_weight="1.0" style="@style/BtnTypeLB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeNA按钮" android:layout_weight="1.0" style="@style/BtnTypeNA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeNA按钮" android:layout_weight="1.0" style="@style/BtnTypeNA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeNB按钮" android:layout_weight="1.0" style="@style/BtnTypeNB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeNB按钮" android:layout_weight="1.0" style="@style/BtnTypeNB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeKA按钮" android:layout_weight="1.0" style="@style/BtnTypeKA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeKA按钮" android:layout_weight="1.0" style="@style/BtnTypeKA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeKB按钮" android:layout_weight="1.0" style="@style/BtnTypeKB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeKB按钮" android:layout_weight="1.0" style="@style/BtnTypeKB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeQA按钮" android:layout_weight="1.0" style="@style/BtnTypeQA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeQA按钮" android:layout_weight="1.0" style="@style/BtnTypeQA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeQB按钮" android:layout_weight="1.0" style="@style/BtnTypeQB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeQB按钮" android:layout_weight="1.0" style="@style/BtnTypeQB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeRA按钮" android:layout_weight="1.0" style="@style/BtnTypeRA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeRA按钮" android:layout_weight="1.0" style="@style/BtnTypeRA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeRB按钮" android:layout_weight="1.0" style="@style/BtnTypeRB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="BtnTypeRB按钮" android:layout_weight="1.0" style="@style/BtnTypeRB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类A按钮" android:layout_weight="1.0" style="@style/BtnTypeFA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类A按钮" android:layout_weight="1.0" android:alpha="@integer/dpi" style="@style/BtnTypeFA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类B按钮" android:layout_weight="1.0" style="@style/BtnTypeFB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类B按钮" android:layout_weight="1.0" style="@style/BtnTypeFB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类C按钮" android:layout_weight="1.0" style="@style/BtnTypeFC" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类C按钮" android:layout_weight="1.0" style="@style/BtnTypeFC" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="#ff45b7ff" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类D按钮" android:layout_weight="1.0" style="@style/BtnTypeFD" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类D按钮" android:layout_weight="1.0" style="@style/BtnTypeFD" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类E按钮" android:layout_weight="1.0" style="@style/BtnTypeFE" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类E按钮" android:layout_weight="1.0" style="@style/BtnTypeFE" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类F按钮" android:layout_weight="1.0" style="@style/BtnTypeFF" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类F按钮" android:layout_weight="1.0" style="@style/BtnTypeFF" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类G按钮" android:layout_weight="1.0" style="@style/BtnTypeFG" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类G按钮" android:layout_weight="1.0" style="@style/BtnTypeFG" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类R按钮" android:layout_weight="1.0" style="@style/BtnTypeFR" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="通用类R按钮" android:layout_weight="1.0" style="@style/BtnTypeFR" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="支付A按钮" android:layout_weight="1.0" style="@style/BtnTypePA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="支付A按钮" android:layout_weight="1.0" style="@style/BtnTypePA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="支付B按钮" android:layout_weight="1.0" style="@style/BtnTypePB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="支付B按钮" android:layout_weight="1.0" style="@style/BtnTypePB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="支付C按钮" android:layout_weight="1.0" style="@style/BtnTypePC" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="支付C按钮" android:layout_weight="1.0" style="@style/BtnTypePC" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="VIP A按钮" android:layout_weight="1.0" style="@style/BtnTypeVA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="VIP A按钮" android:layout_weight="1.0" style="@style/BtnTypeVA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="VIP B按钮" android:layout_weight="1.0" style="@style/BtnTypeVB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="VIP B按钮" android:layout_weight="1.0" style="@style/BtnTypeVB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="商城A按钮" android:layout_weight="1.0" style="@style/BtnTypeMA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="商城A按钮" android:layout_weight="1.0" style="@style/BtnTypeMA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="商城B按钮" android:layout_weight="1.0" style="@style/BtnTypeMB" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="商城B按钮" android:layout_weight="1.0" style="@style/BtnTypeMB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="商城C按钮" android:layout_weight="1.0" style="@style/BtnTypeMC" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="商城C按钮" android:layout_weight="1.0" style="@style/BtnTypeMC" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="帮帮公益按钮" android:layout_weight="1.0" style="@style/BtnTypeHA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="帮帮公益按钮" android:layout_weight="1.0" style="@style/BtnTypeHA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="警示类按钮" android:layout_weight="1.0" style="@style/BtnTypeWA" />
+            <Button android:enabled="false" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="警示类按钮" android:layout_weight="1.0" style="@style/BtnTypeWA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/choose_a" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="选择类A按钮" android:layout_weight="1.0" style="@style/BtnTypeCA" />
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="选择类A按钮" android:layout_weight="1.0" style="@style/BtnTypeCA" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/choose_b" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="选择类B按钮" android:layout_weight="1.0" style="@style/BtnTypeCB" />
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="选择类B按钮" android:layout_weight="1.0" style="@style/BtnTypeCB" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/choose_c" android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="选择类C按钮" android:layout_weight="1.0" style="@style/BtnTypeCC" />
+            <Button android:layout_width="0.0dip" android:layout_height="@dimen/uxc_button_height_40" android:text="选择类C按钮" android:layout_weight="1.0" style="@style/BtnTypeCC" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.zuoyebang.design.button.SwitchButton android:id="@id/switchBtn" android:layout_width="50.0dip" android:layout_height="25.0dip" />
+            <com.zuoyebang.design.button.SwitchButton android:id="@id/switchBtn2" android:layout_width="50.0dip" android:layout_height="25.0dip" android:layout_marginStart="20.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

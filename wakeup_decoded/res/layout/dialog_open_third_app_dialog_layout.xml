@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/ll_recommend_content" android:background="@drawable/shape_solid_ffffffff_radius_12dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ff1b1e29" android:id="@id/tv_sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_button_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="20.0dip" android:layout_below="@id/tv_sub_title" android:layout_centerHorizontal="true">
+        <com.suda.yzune.wakeupschedule.aaa.widget.stateview.StateButton android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff1b1e29" android:id="@id/stv_refuse" android:background="@drawable/shape_solid_fff7f8fc_radius_8dp" android:layout_width="118.0dip" android:layout_height="40.0dip" android:text="@string/location_dialog_left" android:includeFontPadding="false" />
+        <com.suda.yzune.wakeupschedule.aaa.widget.stateview.StateButton android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/stv_allow" android:background="@drawable/shape_solid_ff2655fe_radius_8dp" android:layout_width="118.0dip" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:text="打开" android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>

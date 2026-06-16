@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:id="@id/appbar_layout" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/btn_back" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back" android:tint="?colorOnSurface" style="@style/ButtonBackground" />
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="在此输入教务网址" android:layout_weight="1.0" android:layout_marginStart="16.0dip" app:boxCornerRadiusTopEnd="16.0dip" app:boxCornerRadiusTopStart="16.0dip" style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText android:id="@id/et_url" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textUri" android:imeOptions="actionDone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/tv_go" android:padding="16.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_outline_done_24" android:tint="?colorPrimary" style="@style/ButtonBackground" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ProgressBar android:id="@id/pb_load" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:max="100" android:progress="0" style="?android:progressBarStyleHorizontal" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <WebView android:id="@id/wv_course" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.google.android.material.card.MaterialCardView android:id="@id/cv_url_tips" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="0.0dip" app:cardElevation="0.0dip" style="@style/Widget.Material3.CardView.Filled">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.material.textview.MaterialTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="当前使用的网址是上次记录的网址，不一定是正确的教务网址，如果有问题请自行在上方更改" />
+                <com.google.android.material.button.MaterialButton android:layout_gravity="end" android:id="@id/btn_url_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我知道了" style="@style/Widget.Material3.Button.TextButton" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_alignParentBottom="true" android:layout_marginEnd="72.0dip" android:layout_alignParentEnd="true">
+            <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.google.android.material.chip.ChipGroup android:id="@id/cg_qz" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:chipSpacingHorizontal="16.0dip" app:singleSelection="true">
+                    <com.google.android.material.chip.Chip android:id="@id/chip_qz1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="强智 1" android:checkable="true" style="@style/Widget.Material3.Chip.Filter" />
+                    <com.google.android.material.chip.Chip android:id="@id/chip_qz2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="强智 2" android:checkable="true" style="@style/Widget.Material3.Chip.Filter" />
+                    <com.google.android.material.chip.Chip android:id="@id/chip_qz3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="强智 3" android:checkable="true" style="@style/Widget.Material3.Chip.Filter" />
+                    <com.google.android.material.chip.Chip android:id="@id/chip_qz4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="强智 4" android:checkable="true" style="@style/Widget.Material3.Chip.Filter" />
+                    <com.google.android.material.chip.Chip android:id="@id/chip_qz5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="强智 5" android:checkable="true" style="@style/Widget.Material3.Chip.Filter" />
+                    <com.google.android.material.chip.Chip android:id="@id/chip_qz6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="强智 6" android:checkable="true" style="@style/Widget.Material3.Chip.Filter" />
+                </com.google.android.material.chip.ChipGroup>
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@id/fab_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_outline_help_outline_24" android:layout_above="@id/fab_import" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" style="@style/Widget.Material3.FloatingActionButton.Secondary" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@id/fab_import" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_outline_save_alt_24" android:layout_alignParentBottom="true" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/ll_bottom" android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <HorizontalScrollView android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.google.android.material.chip.ChipGroup android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.material.chip.Chip android:id="@id/chip_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="电脑模式" android:layout_marginStart="8.0dip" style="@style/Widget.Material3.Chip.Filter" />
+                <com.google.android.material.chip.Chip android:id="@id/chip_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="密码一直错误？" android:layout_marginStart="8.0dip" style="@style/Widget.Material3.Chip.Assist" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

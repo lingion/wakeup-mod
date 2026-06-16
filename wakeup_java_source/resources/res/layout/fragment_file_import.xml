@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="从文件导入"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="这里能导入的文件，是由 WakeUp课程表 导出的文件！不是任意文件！不是从教务网站上导出的文件！不是 PDF！请不要误会。"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_gravity="end"
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="我已经仔细阅读过上面的说明"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_self"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="48dp"
+                android:text="选择由 WakeUp课程表 导出的文件"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                style="@style/Widget.Material3.Button.UnelevatedButton"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" app:startDestination="@+id/timeTableFragment">
+    <fragment
+        android:label="时间表"
+        android:name="com.suda.yzune.wakeupschedule.settings.TimeTableFragment"
+        android:id="@+id/timeTableFragment">
+        <action
+            android:id="@+id/timeTableFragment_to_timeSettingsFragment"
+            app:destination="@+id/timeSettingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:label="编辑时间表"
+        android:name="com.suda.yzune.wakeupschedule.settings.TimeSettingsFragment"
+        android:id="@+id/timeSettingsFragment"/>
+</navigation>

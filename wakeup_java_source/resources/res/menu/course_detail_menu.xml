@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_twotone_delete_24"
+        android:id="@+id/menu_delete"
+        android:title="@string/course_detail_delete"
+        app:iconTint="?attr/colorError"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_twotone_file_copy_24"
+        android:id="@+id/menu_copy"
+        android:title="@string/menu_copy"
+        app:iconTint="?attr/colorPrimary"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_twotone_edit_24"
+        android:id="@+id/menu_edit"
+        android:title="@string/course_detail_edit"
+        app:iconTint="?attr/colorPrimary"
+        app:showAsAction="always"/>
+</menu>

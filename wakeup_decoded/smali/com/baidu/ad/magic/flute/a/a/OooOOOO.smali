@@ -1,0 +1,356 @@
+.class public abstract Lcom/baidu/ad/magic/flute/a/a/OooOOOO;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static OooO00o()[B
+    .locals 1
+
+    .line 1
+    const/16 v0, 0x26
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    return-object v0
+
+    :array_0
+    .array-data 1
+        -0x39t
+        0x75t
+        0x4ct
+        0x5at
+        0x34t
+        -0x5ct
+        0xft
+        0x2at
+        0x1at
+        0x25t
+        0x0t
+        -0x7ct
+        0x55t
+        0x2dt
+        0x6et
+        -0x40t
+        -0x4dt
+        -0x14t
+        0x22t
+        0x12t
+        -0x21t
+        -0x14t
+        -0x8t
+        0x6ft
+        -0x75t
+        0x62t
+        -0x18t
+        0x58t
+        0x21t
+        -0x23t
+        0x1dt
+        -0x6t
+        0x7t
+        0x35t
+        -0x7t
+        0x58t
+        -0x76t
+        0x53t
+    .end array-data
+.end method
+
+.method public static OooO0O0()[B
+    .locals 1
+
+    .line 1
+    const/16 v0, 0x26
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    return-object v0
+
+    :array_0
+    .array-data 1
+        -0x39t
+        0x75t
+        0x4ct
+        0x5at
+        0x34t
+        -0x5ct
+        0xft
+        0x2at
+        0x1at
+        0x25t
+        0x0t
+        -0x7ct
+        0x41t
+        0x2dt
+        0x6et
+        -0x40t
+        -0x4dt
+        -0x14t
+        0x22t
+        0x12t
+        -0x21t
+        -0x14t
+        -0x8t
+        0x6ft
+        -0x75t
+        0x62t
+        -0x18t
+        0x58t
+        0x21t
+        -0x23t
+        0x1dt
+        -0x6t
+        0x7t
+        0x35t
+        -0x7t
+        0x58t
+        -0x76t
+        0x53t
+    .end array-data
+.end method
+
+.method public static OooO0OO()[B
+    .locals 1
+
+    .line 1
+    const/16 v0, 0x1d
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    return-object v0
+
+    :array_0
+    .array-data 1
+        -0x39t
+        0x75t
+        0x4ct
+        0x5at
+        0x34t
+        -0x5ct
+        0xft
+        0x2at
+        0x1at
+        0x25t
+        0x0t
+        -0x7ct
+        0x41t
+        0x2dt
+        0x6et
+        -0x2dt
+        -0x43t
+        -0x1et
+        0x39t
+        0x1ct
+        -0x2at
+        -0x14t
+        -0x25t
+        0x7at
+        -0x60t
+        0x6dt
+        -0x12t
+        0x5ft
+        0x3ft
+    .end array-data
+.end method
+
+.method public static OooO0Oo()[B
+    .locals 1
+
+    .line 1
+    const/16 v0, 0x18
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    return-object v0
+
+    :array_0
+    .array-data 1
+        -0x39t
+        0x75t
+        0x4ct
+        0x5at
+        0x34t
+        -0x5ct
+        0xft
+        0x2at
+        0x1at
+        0x25t
+        0x0t
+        -0x7ct
+        0x41t
+        0x2dt
+        0x6et
+        -0x40t
+        -0x4dt
+        -0x14t
+        0x22t
+        0x12t
+        -0x21t
+        -0x14t
+        -0x8t
+        0x6ft
+    .end array-data
+.end method
+
+.method public static OooO0o()[B
+    .locals 1
+
+    .line 1
+    const/16 v0, 0x40
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    return-object v0
+
+    :array_0
+    .array-data 1
+        -0x39t
+        0x75t
+        0x4ct
+        0x5at
+        0x34t
+        -0x5ct
+        0xft
+        0x2at
+        0x1at
+        0x25t
+        0x0t
+        -0x7ct
+        0x45t
+        0x27t
+        0x77t
+        -0x53t
+        -0x42t
+        -0x20t
+        0x3bt
+        0x19t
+        -0x3ct
+        -0x59t
+        -0x9t
+        0x7ft
+        -0x20t
+        0x61t
+        -0x18t
+        0x5dt
+        0x24t
+        -0x25t
+        0x57t
+        -0x31t
+        0xet
+        0x34t
+        -0x7t
+        0x54t
+        -0x36t
+        0x44t
+        0x2ct
+        0x7ct
+        0x61t
+        0xft
+        0x3at
+        -0x72t
+        0x49t
+        0x59t
+        0x69t
+        0x7et
+        -0x5t
+        -0x4dt
+        0x72t
+        0x68t
+        -0x62t
+        -0x59t
+        0x73t
+        -0x17t
+        0x7et
+        -0x40t
+        -0x6ft
+        -0xdt
+        -0x2t
+        -0x47t
+        0x4ct
+        0x69t
+    .end array-data
+.end method
+
+.method public static OooO0o0()[B
+    .locals 1
+
+    .line 1
+    const/16 v0, 0x38
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    return-object v0
+
+    :array_0
+    .array-data 1
+        -0x39t
+        0x75t
+        0x4ct
+        0x5at
+        0x34t
+        -0x5ct
+        0xft
+        0x2at
+        0x1at
+        0x25t
+        0x0t
+        -0x7ct
+        0x45t
+        0x27t
+        0x77t
+        -0x53t
+        -0x42t
+        -0x20t
+        0x3bt
+        0x19t
+        -0x3ct
+        -0x59t
+        -0x9t
+        0x7ft
+        -0x20t
+        0x61t
+        -0x18t
+        0x5dt
+        0x24t
+        -0x25t
+        0x57t
+        -0x31t
+        0xet
+        0x34t
+        -0x7t
+        0x54t
+        -0x36t
+        0x44t
+        0x2ct
+        0x7ct
+        0x61t
+        0xft
+        0x3at
+        -0x72t
+        0x5et
+        0x44t
+        0x6ft
+        0x7dt
+        -0x28t
+        -0x44t
+        0x63t
+        0x52t
+        -0x64t
+        -0x51t
+        0x73t
+        -0xbt
+    .end array-data
+.end method

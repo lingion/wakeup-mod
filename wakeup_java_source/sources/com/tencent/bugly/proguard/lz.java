@@ -1,0 +1,34 @@
+package com.tencent.bugly.proguard;
+
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
+import androidx.annotation.Nullable;
+
+/* loaded from: classes3.dex */
+public final class lz extends lw {
+    @Override // com.tencent.bugly.proguard.lw
+    @Nullable
+    public final lu a(@Nullable Drawable drawable) {
+        return a(drawable, 0);
+    }
+
+    @Override // com.tencent.bugly.proguard.lw
+    @Nullable
+    public final lu b(@Nullable Drawable drawable) {
+        return a(drawable, 1);
+    }
+
+    private static lu a(@Nullable Drawable drawable, int i) {
+        Bitmap bitmap;
+        if (!(drawable instanceof StateListDrawable)) {
+            return null;
+        }
+        Drawable current = drawable.getCurrent();
+        if (!(current instanceof BitmapDrawable) || (bitmap = ((BitmapDrawable) current).getBitmap()) == null) {
+            return null;
+        }
+        return new lu(i, bitmap.getWidth(), bitmap.getHeight(), lq.getAllocationByteCount(bitmap));
+    }
+}

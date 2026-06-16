@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_solid_ffffffff_left_right_radius_12dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="@color/black_1B1E29" android:gravity="center" android:id="@id/downLoadPic" android:padding="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/showmultiPicture_downLoad_icon" />
+    <View android:background="#fff7f9fa" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+    <TextView android:textSize="16.0dip" android:textColor="#ff626466" android:gravity="center" android:id="@id/cancleDownload" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/showmultiPicture_cancle_icon" />
+</LinearLayout>

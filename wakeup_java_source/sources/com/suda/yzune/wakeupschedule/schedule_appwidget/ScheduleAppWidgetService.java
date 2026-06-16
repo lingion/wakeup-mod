@@ -1,0 +1,35 @@
+package com.suda.yzune.wakeupschedule.schedule_appwidget;
+
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.widget.RemoteViewsService;
+import java.util.List;
+
+/* loaded from: classes4.dex */
+public final class ScheduleAppWidgetService extends RemoteViewsService {
+    @Override // android.widget.RemoteViewsService
+    public RemoteViewsService.RemoteViewsFactory onGetViewFactory(Intent intent) {
+        String schemeSpecificPart;
+        List listO0000O0O;
+        if (intent == null) {
+            Context applicationContext = getApplicationContext();
+            kotlin.jvm.internal.o0OoOo0.OooO0o(applicationContext, "getApplicationContext(...)");
+            return new OooO0OO(applicationContext, 0, false, 6, null);
+        }
+        Uri data = intent.getData();
+        if (data == null || (schemeSpecificPart = data.getSchemeSpecificPart()) == null || (listO0000O0O = kotlin.text.oo000o.o0000O0O(schemeSpecificPart, new String[]{","}, false, 0, 6, null)) == null) {
+            Context applicationContext2 = getApplicationContext();
+            kotlin.jvm.internal.o0OoOo0.OooO0o(applicationContext2, "getApplicationContext(...)");
+            return new OooO0OO(applicationContext2, 0, false, 6, null);
+        }
+        if (listO0000O0O.size() < 2) {
+            Context applicationContext3 = getApplicationContext();
+            kotlin.jvm.internal.o0OoOo0.OooO0o(applicationContext3, "getApplicationContext(...)");
+            return new OooO0OO(applicationContext3, 0, kotlin.jvm.internal.o0OoOo0.OooO0O0(listO0000O0O.get(0), "1"), 2, null);
+        }
+        Context applicationContext4 = getApplicationContext();
+        kotlin.jvm.internal.o0OoOo0.OooO0o(applicationContext4, "getApplicationContext(...)");
+        return new OooO0OO(applicationContext4, Integer.parseInt((String) listO0000O0O.get(1)), kotlin.jvm.internal.o0OoOo0.OooO0O0(listO0000O0O.get(0), "1"));
+    }
+}

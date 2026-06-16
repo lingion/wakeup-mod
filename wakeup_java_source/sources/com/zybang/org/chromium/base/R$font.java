@@ -1,0 +1,5 @@
+package com.zybang.org.chromium.base;
+
+/* loaded from: classes5.dex */
+public final class R$font extends gen.com.zybang.org.chromium.base.gen_module.R$font {
+}

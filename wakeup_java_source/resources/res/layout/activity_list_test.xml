@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="singleline_title_list_style_test1"/>
+        <include
+            android:id="@+id/singleline_title_list_style_test1"
+            layout="@layout/uxc_list_singleline_title_list_style_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="singleline_list_style1_test1"/>
+        <include layout="@layout/uxc_list_singleline_list_style1_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="singleline_list_style1_test2"/>
+        <include layout="@layout/uxc_list_singleline_list_style1_test2_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="singleline_list_style2_test1"/>
+        <include layout="@layout/uxc_list_singleline_list_style2_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="singleline_list_style2_test2"/>
+        <include layout="@layout/uxc_list_singleline_list_style2_test2_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="doubleline_list_style1_test1"/>
+        <include
+            android:id="@+id/doubleline_list_style1_test1"
+            layout="@layout/uxc_list_doubleline_list_style1_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="doubleline_list_style1_test2"/>
+        <include
+            android:id="@+id/doubleline_list_style1_test2"
+            layout="@layout/uxc_list_doubleline_list_style1_test2_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="doubleline_list_style2_test1"/>
+        <include
+            android:id="@+id/doubleline_list_style2_test1"
+            layout="@layout/uxc_list_doubleline_list_style2_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="threeline_list_style1_test1"/>
+        <include layout="@layout/uxc_list_threeline_list_style1_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="threeline_list_style2_test1"/>
+        <include layout="@layout/uxc_list_threeline_list_style2_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="threeline_list_style3_test1"/>
+        <include layout="@layout/uxc_list_threeline_list_style3_test1_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="threeline_list_style4_test1"/>
+        <include layout="@layout/uxc_list_threeline_list_style4_test1_layout"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

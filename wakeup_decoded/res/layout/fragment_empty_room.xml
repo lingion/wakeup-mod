@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <androidx.appcompat.widget.AppCompatSpinner android:id="@id/spinner_campus" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0" android:textAlignment="center" />
+        <androidx.appcompat.widget.AppCompatSpinner android:id="@id/spinner_building" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0" android:textAlignment="center" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatSpinner android:layout_gravity="center" android:id="@id/spinner_date" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginTop="-16.0dip" android:textAlignment="center" />
+    <com.google.android.material.textview.MaterialTextView android:textSize="12.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:text="点击上方可切换日期" android:lineSpacingExtra="2.0dip" />
+    <com.google.android.material.textview.MaterialTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="?colorPrimary" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="此背景色表示该时间段空闲" android:lineSpacingExtra="2.0dip" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_room" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" android:overScrollMode="never" />
+</androidx.appcompat.widget.LinearLayoutCompat>

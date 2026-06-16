@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/title_progress_layout"
+    android:layout_width="@dimen/common_ui_titlebar_default_width"
+    android:layout_height="@dimen/common_ui_titlebar_default_heigh">
+    <ImageButton
+        android:id="@+id/title_right_view"
+        android:background="#00000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="@dimen/common_ui_titlebar_icon_width"
+        android:layout_height="@dimen/common_ui_titlebar_icon_heigh"
+        android:scaleType="centerInside"
+        android:onClick="onRightButtonClicked"/>
+    <ProgressBar
+        android:id="@+id/title_right_progressBar"
+        android:visibility="visible"
+        android:layout_width="@dimen/common_ui_titlebar_icon_width"
+        android:layout_height="@dimen/common_ui_titlebar_icon_heigh"
+        android:indeterminate="false"
+        skin:indeterminateDrawable="@drawable/skin_common_alert_waiting_anim"/>
+</RelativeLayout>

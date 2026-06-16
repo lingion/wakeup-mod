@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zuoyebang.design.noticebar.NoticeBarView android:id="@id/notice_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.zuoyebang.design.noticebar.NoticeBarView android:id="@id/notice_bar2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" />
+    <com.zuoyebang.design.noticebar.NoticeBarView android:id="@id/notice_bar3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" />
+    <com.zuoyebang.design.noticebar.NoticeBarView android:id="@id/notice_bar4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" />
+    <com.zuoyebang.design.noticebar.NoticeBarView android:id="@id/notice_bar5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" />
+</LinearLayout>

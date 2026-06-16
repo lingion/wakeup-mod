@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/id_splash_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <com.qq.e.ads.nativ.MediaView android:id="@id/id_splash_video" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.homework.fastad.common.tool.AppInfoLayout android:id="@id/id_app_download_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="43.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="12.0dip" android:layout_toStartOf="@id/id_skip_layout" />
+    <FrameLayout android:id="@id/id_skip_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="52.0dip" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true">
+        <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="end|top" android:id="@id/id_skip_text" android:background="@drawable/splash_skip_background" android:layout_width="60.0dip" android:layout_height="24.0dip" android:text="跳过5s" />
+        <ImageView android:layout_gravity="center" android:id="@id/id_skip_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/id_hor_layout" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="235.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <FrameLayout android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="194.0dip">
+            <ImageView android:id="@id/id_hor_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+            <com.qq.e.ads.nativ.MediaView android:id="@id/id_hor_video" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="#ff141414" android:ellipsize="end" android:id="@id/id_hor_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:maxLines="1" android:includeFontPadding="false" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+        <TextView android:textSize="12.0dip" android:textColor="#ff141414" android:ellipsize="end" android:id="@id/id_hor_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:maxLines="1" android:includeFontPadding="false" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/id_ylh_open_ad_layout" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginBottom="80.0dip" android:layout_alignParentBottom="true">
+        <View android:layout_gravity="center" android:id="@id/id_ylh_open_ad_anim" android:background="@drawable/splash_open_ad_anim" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <View android:layout_gravity="center" android:id="@id/id_ylh_open_ad_anim_1" android:background="@drawable/splash_open_ad_anim" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/id_ylh_open_ad_text" android:background="@drawable/splash_open_ad_background" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginStart="42.0dip" android:layout_marginEnd="42.0dip">
+            <TextView android:textSize="16.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="跳转详情或第三方应用" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/splash_open_ad_icon" />
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/id_adn_logo" android:layout_width="37.0dip" android:layout_height="16.0dip" android:layout_marginBottom="16.0dip" android:scaleType="fitStart" android:layout_alignParentBottom="true" android:layout_marginStart="16.0dip" />
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="left" />
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="right" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="top" app:tip_gravity="left" />
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="bottom" app:tip_gravity="right" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="top" app:tip_gravity="centre" />
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="bottom" app:tip_gravity="centre" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="top" app:offset="25.0dip" app:tip_gravity="centre" />
+        <com.zuoyebang.design.widget.UxcTipsView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:direction="bottom" app:offset="25.0dip" app:tip_gravity="centre" />
+    </LinearLayout>
+    <TextView android:id="@id/pop_tips" android:layout_width="150.0dip" android:layout_height="@dimen/uxc_button_height_40" android:layout_margin="10.0dip" android:text="popwindow调用方式" style="@style/BtnTypeFF" />
+</LinearLayout>

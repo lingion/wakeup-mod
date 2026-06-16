@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#22000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.homework.fastad.common.tool.AppInfoLayout android:id="@id/id_app_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <androidx.cardview.widget.CardView android:id="@id/id_content_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70.0dip" android:layout_marginBottom="45.0dip" android:layout_centerInParent="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="12.0dip" app:cardElevation="0.0dip">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/id_ad_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <com.fastad.api.player.VideoPlayLayout android:id="@id/id_ad_video" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/interact_gradient_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/id_ad_owner_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip">
+                <ImageView android:id="@id/id_ad_owner_logo" android:layout_width="82.0dip" android:layout_height="82.0dip" />
+                <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/id_ad_owner_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:maxLines="1" />
+                <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/id_ad_owner_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:maxLines="1" />
+                <RatingBar android:id="@id/id_ad_owner_rate" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_marginTop="15.0dip" android:progressDrawable="@drawable/app_rate_progress" android:numStars="5" android:rating="1.0" android:stepSize="1.0" android:isIndicator="true" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/id_ad_click_look" android:background="@drawable/white_click_look_ad_shape" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="60.0dip" android:minWidth="225.0dip" android:layout_marginStart="40.0dip" android:layout_marginEnd="40.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/id_ad_shake" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="25.0dip" />
+                <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/id_ad_look_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginEnd="12.0dip">
+            <ImageView android:layout_gravity="end|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/black_close_ad" />
+            <ImageView android:layout_gravity="center" android:id="@id/id_ad_close" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView android:id="@id/id_adn_logo" android:layout_width="37.0dip" android:layout_height="16.0dip" android:layout_marginBottom="16.0dip" android:scaleType="fitEnd" android:layout_alignParentBottom="true" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+</RelativeLayout>

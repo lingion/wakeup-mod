@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="39.0dip" android:paddingRight="39.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="39.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="56.0dip" android:weightSum="3.0" android:layout_centerHorizontal="true">
+        <com.suda.yzune.wakeupschedule.aaa.widget.FontTextView android:id="@id/item_code_iv1" app:fontPath="fonts/phone.ttf" style="@style/text_editStyle" />
+        <View android:layout_width="18.0dip" android:layout_height="wrap_content" />
+        <com.suda.yzune.wakeupschedule.aaa.widget.FontTextView android:id="@id/item_code_iv2" app:fontPath="fonts/phone.ttf" style="@style/text_editStyle" />
+        <View android:layout_width="18.0dip" android:layout_height="wrap_content" />
+        <com.suda.yzune.wakeupschedule.aaa.widget.FontTextView android:id="@id/item_code_iv3" app:fontPath="fonts/phone.ttf" style="@style/text_editStyle" />
+        <View android:layout_width="18.0dip" android:layout_height="wrap_content" />
+        <com.suda.yzune.wakeupschedule.aaa.widget.FontTextView android:id="@id/item_code_iv4" app:fontPath="fonts/phone.ttf" style="@style/text_editStyle" />
+    </LinearLayout>
+    <EditText android:id="@id/item_edittext" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="56.0dip" android:inputType="number" />
+</RelativeLayout>

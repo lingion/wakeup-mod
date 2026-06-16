@@ -1,0 +1,19 @@
+package com.baidu.mobads.container.nativecpu;
+
+import android.view.View;
+
+/* loaded from: classes2.dex */
+class at implements View.OnClickListener {
+    final /* synthetic */ a a;
+    final /* synthetic */ t b;
+
+    at(t tVar, a aVar) {
+        this.b = tVar;
+        this.a = aVar;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public void onClick(View view) {
+        this.a.handleClick(view, false);
+    }
+}

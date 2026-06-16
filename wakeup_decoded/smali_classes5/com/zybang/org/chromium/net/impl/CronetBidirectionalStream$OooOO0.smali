@@ -1,0 +1,22 @@
+.class interface abstract Lcom/zybang/org/chromium/net/impl/CronetBidirectionalStream$OooOO0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/zybang/org/chromium/net/impl/CronetBidirectionalStream;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "OooOO0"
+.end annotation
+
+
+# virtual methods
+.method public abstract OooO00o(JLcom/zybang/org/chromium/net/impl/CronetBidirectionalStream;Z)V
+.end method
+
+.method public abstract OooO0O0(JLcom/zybang/org/chromium/net/impl/CronetBidirectionalStream;[Ljava/nio/ByteBuffer;[I[IZ)Z
+.end method

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.zuoyebang.design.widget.TrigonView
+        android:id="@+id/trigon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:trv_direction="top"/>
+    <TextView
+        android:textSize="@dimen/uxc_font_size_14"
+        android:textColor="@color/c2_1"
+        android:gravity="center"
+        android:id="@+id/content_text"
+        android:background="@drawable/uxc_guide_tips_bg_a"
+        android:paddingLeft="@dimen/uxc_guide_padding_a"
+        android:paddingRight="@dimen/uxc_guide_padding_a"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/uxc_guide_height_a"
+        android:text="全新上线啦"/>
+</LinearLayout>

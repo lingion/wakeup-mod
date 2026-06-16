@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_black_20" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:gravity="center_vertical" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="13.0dip" android:indeterminateDrawable="@drawable/common_alert_waiting_anim_white" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffb1b1b1" android:layout_gravity="center_vertical" android:id="@id/id_waiting_message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

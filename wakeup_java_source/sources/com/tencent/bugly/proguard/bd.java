@@ -1,0 +1,8 @@
+package com.tencent.bugly.proguard;
+
+/* loaded from: classes3.dex */
+public interface bd {
+    int a(String str, ba baVar);
+
+    boolean isValid();
+}

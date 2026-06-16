@@ -1,0 +1,41 @@
+.class public final Lcom/baidu/homework/uba/api/R$style;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final TextAppearance_Compat_Notification:I = 0x7f14022b
+
+.field public static final TextAppearance_Compat_Notification_Info:I = 0x7f14022c
+
+.field public static final TextAppearance_Compat_Notification_Info_Media:I = 0x7f14022d
+
+.field public static final TextAppearance_Compat_Notification_Line2:I = 0x7f14022e
+
+.field public static final TextAppearance_Compat_Notification_Line2_Media:I = 0x7f14022f
+
+.field public static final TextAppearance_Compat_Notification_Media:I = 0x7f140230
+
+.field public static final TextAppearance_Compat_Notification_Time:I = 0x7f140231
+
+.field public static final TextAppearance_Compat_Notification_Time_Media:I = 0x7f140232
+
+.field public static final TextAppearance_Compat_Notification_Title:I = 0x7f140233
+
+.field public static final TextAppearance_Compat_Notification_Title_Media:I = 0x7f140234
+
+.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f1403a9
+
+.field public static final Widget_Compat_NotificationActionText:I = 0x7f1403aa
+
+.field public static final Widget_Support_CoordinatorLayout:I = 0x7f1404df
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

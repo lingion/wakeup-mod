@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootView" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="start" android:id="@id/importIcon" android:layout_width="53.0dip" android:layout_height="106.0dip" android:layout_marginTop="38.0dip" android:src="@drawable/add_course_image_guide_icon" android:contentDescription="@null" android:layout_marginStart="36.0dip" />
+    <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:background="@drawable/guide_white_bg" android:paddingLeft="20.0dip" android:paddingTop="16.0dip" android:paddingRight="20.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="308.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff141414" android:gravity="start|center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="点击后拖动，添加课程" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffa3a3a3" android:gravity="start|center" android:id="@id/subTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="上下拖动选择节数，松手后再次点击课程添加课程信息" />
+        <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:id="@id/guid_next_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip">
+            <ImageView android:id="@id/guide_next_icon" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/guide_next_finish" android:contentDescription="@null" android:layout_marginEnd="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff87888a" android:gravity="center" android:layout_gravity="end" android:id="@id/guide_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="17.0dip" android:text="我知道了" android:drawablePadding="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

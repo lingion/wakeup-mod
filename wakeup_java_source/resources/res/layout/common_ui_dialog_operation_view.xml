@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="@dimen/common_ui_dialog_width"
+    android:layout_height="wrap_content">
+    <com.zuoyebang.design.widget.RoundRecyclingImageView
+        android:id="@+id/ad_dialog_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_ui_dialog_operation_height"
+        android:scaleType="centerCrop"
+        app:corner_radius="@dimen/common_ui_dialog_image_round"/>
+    <ImageButton
+        android:id="@+id/ad_dialog_close"
+        android:background="@android:color/transparent"
+        android:layout_width="@dimen/common_ui_dialog_operation"
+        android:layout_height="@dimen/common_ui_dialog_operation"
+        android:layout_marginTop="@dimen/common_ui_dialog_operation_margin"
+        android:src="@drawable/common_ui_operation_icon_close"/>
+</LinearLayout>

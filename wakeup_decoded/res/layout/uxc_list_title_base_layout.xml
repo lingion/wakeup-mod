@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zuoyebang.design.tag.TagTextView android:id="@id/tag_title_left_second_tv" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginRight="8.0dip" />
+    <com.zuoyebang.design.tag.TagTextView android:id="@id/tag_title_left_first_tv" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginRight="8.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/c1_1" android:ellipsize="end" android:id="@id/ls_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="用户ID" android:singleLine="true" android:includeFontPadding="false" android:layout_centerVertical="true" />
+    <com.zuoyebang.design.tag.TagTextView android:id="@id/tag_title_right_first_tv" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginLeft="8.0dip" />
+    <com.zuoyebang.design.tag.TagTextView android:id="@id/tag_title_right_second_tv" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginLeft="8.0dip" />
+</LinearLayout>

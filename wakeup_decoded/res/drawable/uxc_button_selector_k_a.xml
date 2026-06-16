@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/uxc_button_radius" />
+            <gradient android:startColor="@color/uxc_btn_bg_k_a_1_highlight" android:endColor="@color/uxc_btn_bg_k_a_2_highlight" android:angle="360.0" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/uxc_button_radius" />
+            <gradient android:startColor="@color/uxc_btn_bg_k_a_1_disable" android:endColor="@color/uxc_btn_bg_k_a_2_disable" android:angle="360.0" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/uxc_button_radius" />
+            <gradient android:startColor="@color/uxc_btn_bg_k_a_1_normal" android:endColor="@color/uxc_btn_bg_k_a_2_normal" android:angle="360.0" />
+        </shape>
+    </item>
+</selector>

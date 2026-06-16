@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:padding="16.0dip" android:layout_width="56.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_twotone_class_24" app:tint="#ff16aea0" />
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/ll_course_name" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatEditText android:textSize="14.0sp" android:gravity="center_vertical" android:id="@id/et_name" android:background="@null" android:layout_width="fill_parent" android:layout_height="64.0dip" android:hint="@string/course_name" android:lines="1" android:singleLine="true" android:layout_marginStart="56.0dip" android:layout_marginEnd="24.0dip" />
+        <HorizontalScrollView android:id="@id/sv_candidate_name" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="56.0dip" android:layout_marginEnd="24.0dip">
+            <com.google.android.material.chip.ChipGroup android:id="@id/cg_candidate_name" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true" />
+        </HorizontalScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/ll_color" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_below="@id/ll_course_name">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/iv_color" android:padding="16.0dip" android:layout_width="56.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_twotone_colorize_24" />
+        <com.google.android.material.textview.MaterialTextView android:enabled="false" android:textSize="14.0sp" android:gravity="center_vertical" android:id="@id/tv_color" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="选取颜色" android:lines="1" android:singleLine="true" android:layout_marginEnd="24.0dip" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/ll_credit" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_below="@id/ll_color">
+        <androidx.appcompat.widget.AppCompatImageView android:padding="16.0dip" android:layout_width="56.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_twotone_assistant_photo_24" app:tint="#ff1e88e5" />
+        <com.google.android.material.textview.MaterialTextView android:textSize="14.0sp" android:gravity="center_vertical" android:id="@id/tv_credit" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/credit_optional" android:lines="1" android:singleLine="true" android:layout_marginEnd="24.0dip" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:id="@id/ll_note" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_below="@id/ll_credit">
+        <androidx.appcompat.widget.AppCompatImageView android:padding="16.0dip" android:layout_width="56.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_twotone_sticky_note_2_24" app:tint="#fffdd835" />
+        <com.google.android.material.textview.MaterialTextView android:textSize="14.0sp" android:gravity="center_vertical" android:id="@id/tv_note" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/note_optional" android:lines="1" android:singleLine="true" android:layout_marginEnd="24.0dip" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.google.android.material.divider.MaterialDivider android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/ll_note" android:alpha="0.5" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_appwidget_pic_bg" android:background="@drawable/appwidget_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/iv_appwidget" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/appwidget_bg" />
+    <RelativeLayout android:id="@id/rl_appwidget" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_title" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8.0dip">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="8月9日" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:id="@id/tv_schedule_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的课表" android:maxLines="1" android:maxLength="12" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:id="@id/tv_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" | 第1周    周四" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@id/iv_settings" android:padding="4.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_outline_tune_24" android:layout_marginEnd="8.0dip" android:layout_toStartOf="@id/iv_next" />
+            <ImageView android:id="@id/iv_next" android:padding="4.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_back" android:rotation="180.0" android:layout_marginEnd="8.0dip" android:layout_alignParentEnd="true" />
+            <ImageView android:id="@id/iv_back" android:padding="4.0dip" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_back" android:layout_marginEnd="8.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/weekName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_title">
+            <TextView android:textStyle="bold" android:id="@id/tv_title0" android:layout_width="0.0dip" android:layout_weight="0.64" android:lineSpacingExtra="0.0dip" style="@style/ScheduleHeaderStyle" />
+            <TextView android:id="@id/tv_title1" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ScheduleHeaderStyle" />
+            <TextView android:id="@id/tv_title2" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ScheduleHeaderStyle" />
+            <TextView android:id="@id/tv_title3" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ScheduleHeaderStyle" />
+            <TextView android:id="@id/tv_title4" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ScheduleHeaderStyle" />
+            <TextView android:id="@id/tv_title5" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ScheduleHeaderStyle" />
+            <TextView android:id="@id/tv_title6" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ScheduleHeaderStyle" />
+            <TextView android:id="@id/tv_title7" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ScheduleHeaderStyle" />
+        </LinearLayout>
+        <ListView android:id="@id/lv_schedule" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:layout_below="@id/weekName" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@android:id/empty" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/weekName" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:paddingHorizontal="16.0dip">
+            <ImageView android:id="@id/empty_image" android:layout_width="wrap_content" android:layout_height="120.0dip" android:src="@drawable/ic_schedule_empty" />
+            <TextView android:textSize="12.0dip" android:id="@id/empty_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="请去系统设置允许 App 后台运行和自启哦" android:lineSpacingExtra="8.0dip" android:textAlignment="center" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.suda.yzune.wakeupschedule.widget.ShadowFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" app:linear_bg_color="@color/white" app:linear_elevation_move_size="1.0dip" app:linear_round_radius="16.0dip" app:linear_shadow_color="#19000000" app:linear_shadow_size="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/schedule_popup_window_bg" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingVertical="4.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/modify_current_week" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="190.0dip" android:minHeight="46.0dip" android:paddingHorizontal="4.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/modify_current_week" android:minWidth="18.0dip" android:minHeight="18.0dip" android:contentDescription="@null" android:layout_marginHorizontal="12.0dip" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:gravity="center" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="修改当前周" />
+        </LinearLayout>
+        <View android:id="@id/back_to_current_week_line" android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/back_to_current_week" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="190.0dip" android:minHeight="46.0dip" android:paddingHorizontal="4.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/back_to_current_week" android:minWidth="18.0dip" android:minHeight="18.0dip" android:contentDescription="@null" android:layout_marginHorizontal="12.0dip" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:gravity="center" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="回到当前周" />
+        </LinearLayout>
+        <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/create_new_schedule" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="190.0dip" android:minHeight="46.0dip" android:paddingHorizontal="4.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/create_new_schedule" android:minWidth="18.0dip" android:minHeight="18.0dip" android:contentDescription="@null" android:layout_marginHorizontal="12.0dip" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:gravity="center" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="新建课表" />
+        </LinearLayout>
+    </LinearLayout>
+</com.suda.yzune.wakeupschedule.widget.ShadowFrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/id_ad_image_layout">
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#ffffffff"
+        android:id="@+id/id_ad_close"
+        android:background="@drawable/bg_solid_trans_top_end"
+        android:padding="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭"
+        android:layout_alignParentEnd="true"/>
+    <com.homework.fastad.view.MarqueeTextView
+        android:textSize="10sp"
+        android:textColor="#ffffffff"
+        android:ellipsize="none"
+        android:id="@+id/id_ad_no_ad"
+        android:background="@drawable/bg_solid_trans_top_end"
+        android:padding="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="纯净无广告"
+        android:singleLine="true"
+        android:drawableStart="@drawable/icon_no_ad_left"
+        android:layout_marginEnd="3.5dp"
+        android:layout_toStartOf="@+id/id_ad_close"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#ffffffff"
+        android:layout_gravity="end|top"
+        android:id="@+id/id_feed_back"
+        android:background="@drawable/bg_solid_trans_top_end"
+        android:padding="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我要反馈"
+        android:layout_marginEnd="3.5dp"
+        android:layout_toStartOf="@+id/id_ad_no_ad"/>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="52.0dip" android:layout_height="52.0dip">
+        <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/dls_recycling_img" android:background="@color/c1_4" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/dls_tag_img" android:background="@color/c6_1" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="72.0dip" layout="@layout/uxc_list_doubleline_list_style1_base_layout" />
+</LinearLayout>

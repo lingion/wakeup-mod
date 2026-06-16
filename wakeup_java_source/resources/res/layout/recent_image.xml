@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/recentLayout"
+        android:background="@drawable/bg_recent_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.zybang.camera.view.RotateAnimImageView
+            android:id="@+id/recentImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:scaleType="centerCrop"
+            app:corner_radius="8dp"
+            app:is_cover_src="true"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/bottomTriangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_sdk_icon_arrow"
+        app:layout_constraintLeft_toLeftOf="@+id/recentLayout"
+        app:layout_constraintRight_toRightOf="@+id/recentLayout"
+        app:layout_constraintTop_toBottomOf="@+id/recentLayout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

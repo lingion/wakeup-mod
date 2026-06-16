@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/list_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.homework.common.ui.list.CustomRecyclerView android:layout_gravity="center" android:id="@id/slide_list" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/cancel_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/t_3" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height_surface" style="@style/DividerBottomSurface" />
+        <TextView android:textSize="@dimen/uxc_font_size_16" android:textColor="@color/c1_2" android:gravity="center" android:layout_gravity="center" android:id="@id/cancle" android:background="@drawable/uxc_dialog_list_item_bg" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="取消" />
+    </LinearLayout>
+</LinearLayout>

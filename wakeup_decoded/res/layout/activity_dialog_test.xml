@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:id="@id/btn1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开消息类dialog" android:layout_weight="1.0" />
+            <Button android:id="@id/btn2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开常规类一个按钮dialog" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:id="@id/btn3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开常规类两个按钮dialog" android:layout_weight="1.0" />
+            <Button android:id="@id/btn4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开小图dialog" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:id="@id/btn5" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开大图dialog" android:layout_weight="1.0" />
+            <Button android:id="@id/btn6" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开运营类dialog" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:id="@id/btn7" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开复杂业务dialog" android:layout_weight="1.0" />
+            <Button android:id="@id/btn8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开列表dialog" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:id="@id/btn9" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开分享类弹层" android:layout_weight="1.0" />
+            <Button android:id="@id/btn10" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开滑动关闭类弹窗" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <Button android:id="@id/btn11" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开底部List弹窗" android:layout_weight="1.0" />
+            <Button android:id="@id/btn12" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="打开底部List 確定弹窗" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

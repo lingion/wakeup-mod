@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:paddingStart="8.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textview.MaterialTextView android:gravity="center" android:id="@id/tv_room_name" android:layout_width="64.0dip" android:layout_height="wrap_content" android:text="41C106" android:layout_marginEnd="8.0dip" />
+    <com.suda.yzune.wakeupschedule.widget.RoomView android:id="@id/room_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

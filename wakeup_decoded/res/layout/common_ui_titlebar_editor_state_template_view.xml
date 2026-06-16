@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/common_ui_titlebar_default_heigh"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/btn_back" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_icon_return" android:scaleType="centerInside" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+    <TextView android:textSize="@dimen/uxc_font_size_14" android:textColor="@color/common_ui_titlebar_text_black_template_selector" android:ellipsize="end" android:gravity="center" android:id="@id/tv_cancel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxWidth="120.0dip" android:text="取消" android:maxLines="1" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+</FrameLayout>

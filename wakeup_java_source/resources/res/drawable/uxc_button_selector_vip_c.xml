@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/uxc_button_radius"/>
+            <gradient
+                android:startColor="@color/uxc_btn_bg_vipc_1_highlight"
+                android:endColor="@color/uxc_btn_bg_vipc_2_highlight"
+                android:angle="360"/>
+            <stroke
+                android:width="@dimen/uxc_button_boarder"
+                android:color="@color/uxc_btn_boarder_vipc_highlight"/>
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/uxc_button_radius"/>
+            <solid android:color="@color/uxc_btn_bg_vipc_disable"/>
+            <stroke
+                android:width="@dimen/uxc_button_boarder"
+                android:color="@color/uxc_btn_boarder_vipc_disable"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/uxc_button_radius"/>
+            <solid android:color="@color/uxc_btn_bg_vipc_normal"/>
+            <stroke
+                android:width="@dimen/uxc_button_boarder"
+                android:color="@color/uxc_btn_boarder_vipc_normal"/>
+        </shape>
+    </item>
+</selector>

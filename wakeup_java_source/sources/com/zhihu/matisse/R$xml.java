@@ -1,0 +1,10 @@
+package com.zhihu.matisse;
+
+/* loaded from: classes4.dex */
+public final class R$xml {
+    public static final int file_pictures = 2132148227;
+    public static final int permission_file_paths = 2132148231;
+
+    private R$xml() {
+    }
+}

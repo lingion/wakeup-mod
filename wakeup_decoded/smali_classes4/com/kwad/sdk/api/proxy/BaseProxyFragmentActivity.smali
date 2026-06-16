@@ -1,0 +1,879 @@
+.class public abstract Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;
+.super Lcom/kwad/sdk/api/core/fragment/KsFragmentActivity;
+.source "SourceFile"
+
+
+# instance fields
+.field private mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/kwad/sdk/api/core/fragment/KsFragmentActivity;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method protected attachBaseContext(Landroid/content/Context;)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->getDelegate(Landroid/content/Context;)Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    iput-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 6
+    .line 7
+    invoke-static {p1}, Lcom/kwad/sdk/api/loader/Wrapper;->wrapContextIfNeed(Landroid/content/Context;)Landroid/content/Context;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p1
+
+    .line 11
+    invoke-super {p0, p1}, Landroid/app/Activity;->attachBaseContext(Landroid/content/Context;)V
+
+    .line 12
+    .line 13
+    .line 14
+    iget-object p1, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 15
+    .line 16
+    invoke-virtual {p1, p0}, Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;->setProxyFragmentActivity(Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;)V
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object p1, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 20
+    .line 21
+    invoke-virtual {p1, p0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->setActivity(Landroid/app/Activity;)V
+
+    .line 22
+    .line 23
+    .line 24
+    return-void
+.end method
+
+.method public createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/app/Activity;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p1
+
+    .line 5
+    invoke-static {p1}, Lcom/kwad/sdk/api/loader/Wrapper;->wrapContextIfNeed(Landroid/content/Context;)Landroid/content/Context;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p1
+
+    .line 9
+    return-object p1
+.end method
+
+.method protected abstract getDelegate(Landroid/content/Context;)Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public getIntent()Landroid/content/Intent;
+    .locals 2
+
+    .line 1
+    invoke-static {}, Lcom/kwad/sdk/api/loader/Loader;->get()Lcom/kwad/sdk/api/loader/Loader;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/loader/Loader;->getExternalClassLoader()Ljava/lang/ClassLoader;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    if-eqz v0, :cond_0
+
+    .line 10
+    .line 11
+    invoke-super {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v1
+
+    .line 15
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setExtrasClassLoader(Ljava/lang/ClassLoader;)V
+
+    .line 16
+    .line 17
+    .line 18
+    return-object v1
+
+    .line 19
+    :cond_0
+    invoke-super {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    return-object v0
+.end method
+
+.method public getLayoutInflater()Landroid/view/LayoutInflater;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-super {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-static {v0}, Lcom/kwad/sdk/api/loader/Wrapper;->wrapInflaterIfNeed(Landroid/view/LayoutInflater;)Landroid/view/LayoutInflater;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    return-object v0
+.end method
+
+.method public getLifecycle()Landroidx/lifecycle/Lifecycle;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Landroidx/activity/ComponentActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getResources()Landroid/content/res/Resources;
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-static {}, Lcom/kwad/sdk/api/loader/Loader;->get()Lcom/kwad/sdk/api/loader/Loader;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    invoke-virtual {v1}, Lcom/kwad/sdk/api/loader/Loader;->getExternalResource()Landroid/content/res/Resources;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v1
+
+    .line 13
+    if-eqz v1, :cond_0
+
+    .line 14
+    .line 15
+    return-object v1
+
+    .line 16
+    :cond_0
+    return-object v0
+.end method
+
+.method protected onActivityResult(IILandroid/content/Intent;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/FragmentActivity;->onActivityResult(IILandroid/content/Intent;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1, p2, p3}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onActivityResult(IILandroid/content/Intent;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1, p2, p3}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public onAttachFragment(Lcom/kwad/sdk/api/core/fragment/KsFragment;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/kwad/sdk/api/core/fragment/KsFragmentActivity;->onAttachFragment(Lcom/kwad/sdk/api/core/fragment/KsFragment;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;->onAttachFragment(Lcom/kwad/sdk/api/core/fragment/KsFragment;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public onBackPressed()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onBackPressed()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method protected onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1, p2}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onCreate(Landroid/os/Bundle;)V
+    .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPreCreate(Landroid/os/Bundle;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onCreate(Landroid/os/Bundle;)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPreDestroy()V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-super {p0}, Lcom/kwad/sdk/api/core/fragment/KsFragmentActivity;->onDestroy()V
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onDestroy()V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-static {p0}, Lcom/kwad/sdk/api/loader/Wrapper;->onDestroy(Landroid/content/Context;)V
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+.end method
+
+.method public onKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0, p1, p2}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p1
+
+    .line 7
+    return p1
+.end method
+
+.method public onKeyLongPress(ILandroid/view/KeyEvent;)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0, p1, p2}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onKeyLongPress(ILandroid/view/KeyEvent;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p1
+
+    .line 7
+    return p1
+.end method
+
+.method public onKeyUp(ILandroid/view/KeyEvent;)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0, p1, p2}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onKeyUp(ILandroid/view/KeyEvent;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p1
+
+    .line 7
+    return p1
+.end method
+
+.method protected onNewIntent(Landroid/content/Intent;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onNewIntent(Landroid/content/Intent;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onNewIntent(Landroid/content/Intent;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onPause()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPrePause()V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPause()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method protected onPostCreate(Landroid/os/Bundle;)V
+    .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/app/Activity;->onPostCreate(Landroid/os/Bundle;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPostCreate(Landroid/os/Bundle;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onPostResume()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPostResume()V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPostResume()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onRestart()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Landroid/app/Activity;->onRestart()V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onRestart()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onRestoreInstanceState(Landroid/os/Bundle;)V
+    .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/app/Activity;->onRestoreInstanceState(Landroid/os/Bundle;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onRestoreInstanceState(Landroid/os/Bundle;)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onResume()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPreResume()V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onResume()V
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onResume()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method protected onSaveInstanceState(Landroid/os/Bundle;)V
+    .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPreSaveInstanceState(Landroid/os/Bundle;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0, p1}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method protected onStart()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPreStart()V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onStart()V
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onStart()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method protected onStop()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onPreStop()V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onStop()V
+
+    .line 7
+    .line 8
+    .line 9
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onStop()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+.method protected onTitleChanged(Ljava/lang/CharSequence;I)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onTitleChanged(Ljava/lang/CharSequence;I)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0, p1, p2}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onTitleChanged(Ljava/lang/CharSequence;I)V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method protected onUserLeaveHint()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Landroid/app/Activity;->onUserLeaveHint()V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/kwad/sdk/api/proxy/BaseProxyFragmentActivity;->mDelegate:Lcom/kwad/sdk/api/proxy/IFragmentActivityProxy;
+
+    .line 5
+    .line 6
+    invoke-virtual {v0}, Lcom/kwad/sdk/api/proxy/IActivityProxy;->onUserLeaveHint()V
+
+    .line 7
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public startActivity(Landroid/content/Intent;)V
+    .locals 3
+
+    .line 1
+    if-eqz p1, :cond_0
+
+    .line 2
+    .line 3
+    const-string v0, "key_start_time"
+
+    .line 4
+    .line 5
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-wide v1
+
+    .line 9
+    invoke-virtual {p1, v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    .line 10
+    .line 11
+    .line 12
+    :cond_0
+    invoke-super {p0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-void
+.end method
+
+.method public superOnBackPressed()V
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Landroidx/activity/ComponentActivity;->onBackPressed()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public superOnKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p1
+
+    .line 5
+    return p1
+.end method
+
+.method public superOnKeyLongPress(ILandroid/view/KeyEvent;)Z
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyLongPress(ILandroid/view/KeyEvent;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p1
+
+    .line 5
+    return p1
+.end method
+
+.method public superOnKeyUp(ILandroid/view/KeyEvent;)Z
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyUp(ILandroid/view/KeyEvent;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p1
+
+    .line 5
+    return p1
+.end method

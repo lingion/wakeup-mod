@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:theme="@style/Theme.AppWidget.AppWidgetContainerParent" android:id="@android:id/background" android:padding="40.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Widget.AppWidget.AppWidget.Container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_title" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12.0dip" android:id="@id/tv_schedule_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="课表" android:maxLines="1" android:maxLength="12" style="@style/TextAppearance.AppCompat.Medium" />
+        <TextView android:textSize="12.0dip" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3.26" android:layout_marginEnd="4.0dip" android:layout_toStartOf="@id/tv_week" style="@style/TextAppearance.AppCompat.Medium" />
+        <TextView android:textSize="12.0dip" android:textColor="?android:colorAccent" android:id="@id/tv_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="周六" android:layout_alignParentEnd="true" style="@style/TextAppearance.AppCompat.Medium" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_courses" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_below="@id/rl_title" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/item_today_modern_widget" />
+        <RelativeLayout android:id="@id/ll_next_course" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_indicator_1" android:layout_width="4.0dip" android:layout_height="fill_parent" android:src="@drawable/appwidget_bg" android:layout_alignTop="@id/ll_course" android:layout_alignBottom="@id/ll_course" android:layout_alignParentStart="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_course" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/iv_indicator_1">
+                <TextView android:textSize="12.0dip" android:textStyle="bold" android:textColor="?android:textColorPrimary" android:id="@id/tv_course_name_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+                <LinearLayout android:id="@id/ll_detail_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="10.0dip" android:id="@id/tv_start_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_marginEnd="8.0dip" style="@style/TextAppearance.AppCompat.Medium" />
+                    <TextView android:textSize="10.0dip" android:id="@id/tv_location_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView android:textSize="14.0dip" android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="💤💤💤\n数据加载中\n马上就好" android:layout_below="@id/rl_title" android:layout_alignParentBottom="true" android:lineSpacingExtra="8.0dip" android:textAlignment="center" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

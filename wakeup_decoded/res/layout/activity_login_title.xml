@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rl_title" android:layout_width="fill_parent" android:layout_height="@dimen/common_title_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/sll_back" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_login_title_close" android:minWidth="24.0dip" android:minHeight="24.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_marginStart="4.0dip" />
+    <com.suda.yzune.wakeupschedule.aaa.widget.stateview.StateLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sll_skip" android:paddingLeft="25.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerInParent="true">
+        <com.suda.yzune.wakeupschedule.aaa.widget.stateview.StateTextView android:textSize="14.0sp" android:textColor="#ff626466" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="跳过" />
+    </com.suda.yzune.wakeupschedule.aaa.widget.stateview.StateLinearLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/nav_schedule_settings" app:startDestination="@id/scheduleSettingsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="课表设置" android:name="com.suda.yzune.wakeupschedule.schedule_settings.ScheduleSettingsFragment" android:id="@id/scheduleSettingsFragment">
+        <action android:id="@id/action_scheduleSettingsFragment_to_tableConfigFragment" app:destination="@id/tableConfigFragment" />
+        <action android:id="@id/action_scheduleSettingsFragment_to_mainStyleFragment" app:destination="@id/mainStyleFragment" />
+        <action android:id="@id/action_scheduleSettingsFragment_to_introAppWidgetFragment" app:destination="@id/introAppWidgetFragment" />
+        <action android:id="@id/action_scheduleSettingsFragment_to_toolsFragment" app:destination="@id/toolsFragment" />
+        <action android:id="@id/action_scheduleSettingsFragment_self" app:destination="@id/scheduleSettingsFragment" />
+    </fragment>
+    <fragment android:label="课表数据" android:name="com.suda.yzune.wakeupschedule.schedule_settings.TableConfigFragment" android:id="@id/tableConfigFragment" />
+    <fragment android:label="课表外观" android:name="com.suda.yzune.wakeupschedule.schedule_settings.MainStyleFragment" android:id="@id/mainStyleFragment" />
+    <fragment android:label="桌面小部件" android:name="com.suda.yzune.wakeupschedule.schedule_settings.IntroAppWidgetFragment" android:id="@id/introAppWidgetFragment" />
+    <fragment android:label="实用工具" android:name="com.suda.yzune.wakeupschedule.schedule_settings.ToolsFragment" android:id="@id/toolsFragment" />
+</navigation>

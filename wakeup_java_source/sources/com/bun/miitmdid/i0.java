@@ -1,0 +1,8 @@
+package com.bun.miitmdid;
+
+import com.bun.lib.MsaIdInterface;
+
+/* loaded from: classes2.dex */
+public interface i0 {
+    void a(MsaIdInterface msaIdInterface);
+}

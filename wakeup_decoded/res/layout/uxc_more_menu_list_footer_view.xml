@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/ok_button" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="8.0dip" android:text="通用类A按钮" style="@style/BtnTypeFA" />
+</LinearLayout>

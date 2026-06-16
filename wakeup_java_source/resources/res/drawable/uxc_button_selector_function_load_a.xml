@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/uxc_button_radius"/>
+            <gradient
+                android:startColor="@color/uxc_btn_bg_loaddinga_1_normal"
+                android:endColor="@color/uxc_btn_bg_loaddinga_2_normal"
+                android:angle="0"/>
+        </shape>
+    </item>
+</selector>

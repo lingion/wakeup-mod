@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/c2_1"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="76dp">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        layout="@layout/uxc_list_singleline_list_style1_base_layout"/>
+    <ImageView
+        android:background="@color/c1_5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/c1_2"
+        android:ellipsize="end"
+        android:id="@+id/sl_style_center_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="24dp"
+        android:text="我的世界没有向我的世界没有向前走我的世界没有向前走前走，只有向左或者向右走"
+        android:maxLines="2"
+        android:includeFontPadding="false"
+        android:layout_toRightOf="@+id/sl_style_left_tv"
+        android:lineSpacingExtra="10dp"/>
+</RelativeLayout>

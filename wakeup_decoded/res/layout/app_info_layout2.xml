@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="10.0dip" android:textColor="#67ffffff" android:id="@id/id_app_description" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="10.0dip" android:textColor="#67ffffff" android:id="@id/id_app_privacy" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="10.0dip" android:textColor="#67ffffff" android:layout_gravity="center_vertical" android:id="@id/id_divider_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" | " />
+        <TextView android:textSize="10.0dip" android:textColor="#67ffffff" android:id="@id/id_app_permission" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="10.0dip" android:textColor="#67ffffff" android:layout_gravity="center_vertical" android:id="@id/id_divider_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" | " />
+        <TextView android:textSize="10.0dip" android:textColor="#67ffffff" android:id="@id/id_app_feature" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

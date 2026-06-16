@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.zuoyebang.design.widget.TrigonView
+        android:id="@+id/trigon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:trv_color="@color/c2_1"
+        app:trv_direction="top"/>
+    <com.zuoyebang.design.widget.PopWidthListView
+        android:layout_gravity="center"
+        android:id="@+id/menu_list"
+        android:background="@drawable/common_ui_menu_radius_bg"
+        android:paddingLeft="@dimen/uxc_menu_padding"
+        android:scrollbars="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/divider_color"
+        android:dividerHeight="@dimen/divider_height"/>
+</LinearLayout>

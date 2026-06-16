@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/c2_1"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="44dp">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        layout="@layout/uxc_list_singleline_title_list_style_base_layout"/>
+    <ImageView
+        android:background="@color/c1_4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.suda.yzune.wakeupschedule.widget.ShadowFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" app:linear_bg_color="@color/white" app:linear_elevation_move_size="1.0dip" app:linear_round_radius="16.0dip" app:linear_shadow_color="#19000000" app:linear_shadow_size="8.0dip">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/schedule_popup_window_bg" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/export_as_backup" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="190.0dip" android:minHeight="46.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/export_as_backup" android:minWidth="18.0dip" android:minHeight="18.0dip" android:contentDescription="@null" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:gravity="center" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/export_as_backup" />
+            </LinearLayout>
+            <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/export_as_cal_file" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="190.0dip" android:minHeight="46.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/export_as_cal_file" android:minWidth="18.0dip" android:minHeight="18.0dip" android:contentDescription="@null" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:gravity="center" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/export_as_ical_file" />
+            </LinearLayout>
+            <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/share_app" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="190.0dip" android:minHeight="46.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/share_app" android:minWidth="18.0dip" android:minHeight="18.0dip" android:contentDescription="@null" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:gravity="center" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_app" />
+            </LinearLayout>
+            <View android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/share_schedule_online" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="190.0dip" android:minHeight="46.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/share_schedule_online" android:minWidth="18.0dip" android:minHeight="18.0dip" android:contentDescription="@null" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff141414" android:gravity="center" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_schedule_online" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.suda.yzune.wakeupschedule.widget.ShadowFrameLayout>
+</FrameLayout>

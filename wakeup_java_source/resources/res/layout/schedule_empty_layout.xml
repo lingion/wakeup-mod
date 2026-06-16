@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#8f141414"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/import_form_empty_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="无课表，通过教务导课"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#ff626466"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/import_form_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minWidth="80dp"
+        android:minHeight="32dp"
+        android:text="一键导入"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_twotone_meeting_room_24" android:id="@id/menu_empty_room" android:title="空教室查询" />
+    <item android:icon="@drawable/ic_twotone_bathtub_24" android:id="@id/menu_bathroom" android:title="东区澡堂拥挤度" />
+    <item android:icon="@drawable/ic_twotone_alarm_on_24" android:id="@id/menu_clock" android:title="课程时钟" />
+    <item android:icon="@drawable/ic_outline_close_24" android:id="@id/menu_hide_suda" android:title="隐藏此功能" />
+</menu>

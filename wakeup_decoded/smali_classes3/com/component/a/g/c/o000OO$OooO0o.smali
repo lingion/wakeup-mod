@@ -1,0 +1,19 @@
+.class public interface abstract Lcom/component/a/g/c/o000OO$OooO0o;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/component/a/g/c/o000OO;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OooO0o"
+.end annotation
+
+
+# virtual methods
+.method public abstract a()V
+.end method

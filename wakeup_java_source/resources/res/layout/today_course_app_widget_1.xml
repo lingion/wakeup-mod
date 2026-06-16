@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/transparent"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8月9日"
+        android:layout_marginStart="8dp"/>
+    <TextView
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="第1周    周四"
+        android:layout_below="@+id/tv_date"
+        android:layout_marginStart="8dp"/>
+    <ListView
+        android:id="@+id/lv_course"
+        android:background="@drawable/muticards_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_below="@+id/tv_week"/>
+</RelativeLayout>

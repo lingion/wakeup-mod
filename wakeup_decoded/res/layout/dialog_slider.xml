@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:padding="?dialogPreferredPadding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.slider.Slider android:id="@id/slider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stepSize="1.0" android:valueFrom="0" android:valueTo="100" />
+</androidx.appcompat.widget.LinearLayoutCompat>

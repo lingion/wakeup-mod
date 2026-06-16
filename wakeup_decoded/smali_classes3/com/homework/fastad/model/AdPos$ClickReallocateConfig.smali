@@ -1,0 +1,50 @@
+.class public Lcom/homework/fastad/model/AdPos$ClickReallocateConfig;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
+.implements Lcom/baidu/homework/common/utils/INoProguard;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/homework/fastad/model/AdPos;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "ClickReallocateConfig"
+.end annotation
+
+
+# instance fields
+.field public adFeedbackTriggerProb:I
+
+.field public adFreeTriggerProb:I
+
+.field public closeBtnTriggerProb:I
+
+.field public dailyMaxTriggerCnt:I
+
+.field public enable:I
+
+.field public firstTriggerThreshold:I
+
+.field public minIntervalSeconds:I
+
+.field public triggerProb:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method

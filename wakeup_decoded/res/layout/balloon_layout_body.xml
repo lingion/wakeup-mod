@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/balloon" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/balloon_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/balloon_content" android:padding="10.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.skydoves.balloon.radius.RadiusLayout android:layout_gravity="center" android:id="@id/balloon_card" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.skydoves.balloon.vectortext.VectorTextView android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/balloon_text" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.skydoves.balloon.radius.RadiusLayout>
+        </FrameLayout>
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/balloon_arrow" android:visibility="invisible" android:layout_width="15.0dip" android:layout_height="10.0dip" android:scaleType="fitXY" android:tint="@android:color/black" android:rotation="180.0" app:srcCompat="@drawable/balloon_arrow_drawable" />
+    </FrameLayout>
+</FrameLayout>

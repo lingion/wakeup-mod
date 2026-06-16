@@ -1,0 +1,17 @@
+package com.bytedance.adsdk.h.h.h;
+
+/* loaded from: classes2.dex */
+class h extends ta {
+    static final int h = ta.h("acTL");
+    int bj;
+    int cg;
+
+    h() {
+    }
+
+    @Override // com.bytedance.adsdk.h.h.h.ta
+    void h(com.bytedance.adsdk.h.h.bj.h hVar) {
+        this.bj = hVar.bj();
+        this.cg = hVar.bj();
+    }
+}

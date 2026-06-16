@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/uxc_menu_pop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:textSize="@dimen/uxc_font_size_14"
+        android:id="@+id/menu_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uxc_button_height_32"
+        android:layout_margin="8dp"
+        android:text="正常态"
+        style="@style/BtnTypeCB"/>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="280dp"
+    android:minHeight="480dp">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/course_detail_menu"
+        app:subtitle="2.0 学分"
+        app:subtitleTextAppearance="?attr/textAppearanceLabelSmall"
+        app:title="高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学"
+        app:titleTextAppearance="?attr/textAppearanceTitleMedium"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/include_detail"
+                layout="@layout/item_add_course_detail"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="12sp"
+                android:id="@+id/tv_time_conflict_courses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/time_conflict_courses"
+                android:singleLine="true"
+                android:layout_marginStart="16dp"/>
+            <RadioGroup
+                android:id="@+id/rg_time_conflict_courses"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
