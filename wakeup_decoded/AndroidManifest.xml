@@ -222,12 +222,12 @@
         <activity android:label="@string/title_select_school" android:name="com.suda.yzune.wakeupschedule.schedule_import.SchoolListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
         <activity android:label="@string/setting_schedule_notify" android:name="com.suda.yzune.wakeupschedule.settings.AdvancedSettingsActivity" android:screenOrientation="portrait"/>
         <activity android:label="咩咩" android:name="com.suda.yzune.wakeupschedule.intro.IntroYoungActivity" android:screenOrientation="portrait"/>
-        <activity android:exported="true" android:launchMode="singleTop" android:name="com.suda.yzune.wakeupschedule.aaa.activity.camerasdk.ZybCameraSDKActivity" android:screenOrientation="portrait" android:theme="@style/CameraCropActivityTheme"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTop" android:name="com.suda.yzune.wakeupschedule.aaa.activity.questionsearch.camera.activity.PicSearchResultBActivity" android:screenOrientation="portrait" android:theme="@style/PicSearchActivityTheme"/>
+        
+        
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.suda.yzune.wakeupschedule.aaa.activity.search.whole.PicManySearchBActivity" android:screenOrientation="portrait" android:theme="@style/PicSearchActivityTheme"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.suda.yzune.wakeupschedule.aaa.activity.CommonCacheHybridActivity" android:screenOrientation="portrait" android:theme="@style/HomeworkActivityTheme"/>
+        
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.suda.yzune.wakeupschedule.aaa.activity.login.SYLoginActivity" android:screenOrientation="portrait" android:theme="@style/HomeworkActivityTheme"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.suda.yzune.wakeupschedule.aaa.activity.CommonWebPictureBrowseActivity" android:screenOrientation="portrait" android:theme="@style/HomeworkActivityTheme"/>
+        
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.suda.yzune.wakeupschedule.aaa.resume.ResumeSplashActivity" android:screenOrientation="portrait" android:theme="@style/HomeworkActivityTheme">
             <meta-data android:name="android.notch_support" android:value="true"/>
         </activity>
