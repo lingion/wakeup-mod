@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:background="@color/c8_2" android:paddingLeft="16.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="56.0dip" android:minHeight="36.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/unbi_notice_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/uxc_notice_bar_warning" />
-    <TextView android:textSize="14.0dip" android:textColor="@color/c8_1" android:gravity="left|center" android:layout_gravity="center" android:id="@id/unbi_notice_content" android:paddingTop="9.0dip" android:paddingRight="16.0dip" android:paddingBottom="9.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="56.0dip" android:minHeight="36.0dip" android:text="作业帮为学币唯一官方充值平台" android:includeFontPadding="false" android:layout_weight="1.0" android:lineSpacingExtra="5.5dip" />
-    <ImageView android:id="@id/unbi_notice_operate" android:paddingRight="16.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="36.0dip" android:src="@drawable/uxc_notice_bar_warning" />
-</LinearLayout>

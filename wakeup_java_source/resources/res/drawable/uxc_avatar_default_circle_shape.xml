@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
-    <stroke
-        android:width="@dimen/uxc_avatar_icon_boarder_size_f"
-        android:color="@color/uxc_avatar_icon_boarder_a"/>
-</shape>

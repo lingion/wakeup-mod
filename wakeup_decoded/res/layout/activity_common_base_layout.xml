@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.baidu.homework.activity.base.SwapBackLayout android:id="@id/swapback" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:layout_gravity="left" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <FrameLayout android:id="@id/content_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</com.baidu.homework.activity.base.SwapBackLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="72.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/dl_style_first_line_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginRight="90.0dip" layout="@layout/uxc_list_title_base_layout" />
-    <LinearLayout android:id="@id/dl_style_second_line_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="90.0dip">
-        <TextView android:textSize="12.0sp" android:textColor="@color/c1_4" android:ellipsize="end" android:id="@id/dls_content_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我是复文本/副标题" android:singleLine="true" android:includeFontPadding="false" android:layout_centerVertical="true" />
-        <com.zuoyebang.design.tag.TagTextView android:id="@id/tag_content_right_first_tv" android:layout_width="wrap_content" android:layout_height="18.0dip" />
-    </LinearLayout>
-</LinearLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView android:layout_gravity="center" android:id="@id/cv_course" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="120.0dip" app:cardElevation="0.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.textview.MaterialTextView android:gravity="center" android:id="@id/tv_course_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="16.0dip" android:text="高等数学" android:lineSpacingExtra="8.0dip" android:textAlignment="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-</com.google.android.material.card.MaterialCardView>

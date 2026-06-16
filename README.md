@@ -3,7 +3,7 @@
 ## 项目说明
 
 把 Android 应用 **WakeUp 课程表 v6.1.06 (com.suda.yzune.wakeupschedule)** 完全逆向，
-并修改打包出一个**无广告、单 ABI 兼容 (Android 7+)** 的精简 APK。
+修改打包出**无广告、单 ABI 兼容 (Android 7+)** 的精简 APK，并将逆向成果整理为**可编译的 Android Studio / Gradle 源码工程**。
 
 源码：https://github.com/zichen0116/wakeup-versions
 
@@ -15,25 +15,35 @@
 
 ```
 wakeup-reverse/
-├── original/                  # 原始 APK（备份）
+├── original/                          # 原始 APK（备份）
 │   └── WakeUp_6.1.06_original.apk
-├── wakeup_decoded/            # apktool 反编译输出
+├── wakeup_decoded/                    # apktool 反编译输出 (smali + res)
 │   ├── AndroidManifest.xml
 │   ├── apktool.yml
-│   ├── smali/                 # 主 dex (classes.dex)
-│   ├── smali_classes2/        # classes2.dex
-│   ├── smali_classes3/        # classes3.dex
-│   ├── smali_classes4/        # classes4.dex
-│   ├── smali_classes5/        # classes5.dex
-│   ├── smali_classes6/        # classes6.dex
-│   ├── res/                   # 资源 (XML/图片)
-│   └── lib/                   # 原生库 (已删除)
-├── wakeup_java_source/        # jadx 反编译输出（Java 源码可读）
-│   └── sources/...
-├── dist/                      # 改包产物
+│   ├── smali/, smali_classes2-6/
+│   ├── res/                           # 资源
+│   └── assets/
+├── wakeup_java_source/                # jadx 反编译输出（Java 源码）
+│   └── sources/...                    # 23,133 个 .java
+├── wakeup-android-project/            # 完整 Gradle 源码工程
+│   ├── app/src/main/
+│   │   ├── AndroidManifest.xml
+│   │   ├── java/com/suda/             # WakeUp 核心代码 (1,255 个 .java)
+│   │   ├── java/com/enrique/
+│   │   ├── res/                       # 资源 (3,405 个文件)
+│   │   └── assets/                    # 资源
+│   ├── app/build.gradle.kts
+│   ├── app/proguard-rules.pro
+│   ├── build.gradle.kts
+│   ├── settings.gradle.kts
+│   ├── gradle.properties
+│   ├── gradlew
+│   └── BUILD.md
+├── dist/                              # 改包产物
 │   ├── WakeUp_6.1.06_noad.apk
 │   └── debug.keystore
-└── PATCHES.md                 # 修改明细
+├── README.md                          # 本文件
+└── PATCHES.md                         # 修改明细
 ```
 
 ---
@@ -57,63 +67,48 @@ wakeup-reverse/
 
 **结果**：APK 不包含任何 native 库，Android 16 arm64-v8a / arm64-v8a / armeabi-v7a / x86_64 都能装。
 
-### 2. 删开屏 / 热启动广告
-**根因**：作业帮收购后接入了 `com.homework.fastad` 广告框架
-- **SplashActivity** (`com.suda.yzune.wakeupschedule.SplashActivity`) 启动时检查 `OooOOOO.OooO0O0()`，
-  返回 `true` 就调 `AdSplashManager` 加载开屏广告（最少 3.5 秒）
+### 2. 删开屏 / 热启动广告（3 处 patch）
 
-**Patch**：`com/suda/yzune/wakeupschedule/aaa/utils/OooOOOO.smali`
-```diff
- .method public static OooO0O0()Z
--    invoke-static {}, L.../OooOOOO;->OooO0o0()I
--    move-result v0
--    if-lez v0, :cond_0
--    const/4 v0, 0x1
--    goto :goto_0
--    :cond_0
--    const/4 v0, 0x0
--    :goto_0
--    return v0
-+    const/4 v0, 0x0
-+    return v0
- .end method
-```
+**smali 层**（用在 dist/APK）：
+- `com/suda/yzune/wakeupschedule/aaa/utils/OooOOOO.smali` 的 `OooO0O0()` 和 `OooO00o()` 改为永远 return false
 
-同样 patch `OooO00o()` 关闭热启动广告。
+**Java 层**（用在 wakeup-android-project 工程）：
+- `SplashActivity.java` 的 `o0ooOOo()` 方法 → 直接调 `o00oO0O()` 跳主页
+- `OooOOOO.java` 的 `OooO0O0()` 和 `OooO00o()` 改为 `return false`
 
-### 3. 让 NativeBlurProcess 兼容
-- `libblur.so` 原用于拍照搜题结果页模糊效果，已删除
-- 把 `NativeBlurProcess.clinit()` 改为空（不再 loadLibrary("blur")）
-- `functionToBlur` 改为空方法（直接 return）
+### 3. NativeBlurProcess 兼容
 
-代价：拍照搜题功能里图片不再做本地模糊，直接返回原图（不影响课程表核心功能）。
+**smali 层**：
+- `<clinit>` 改为空（不再 loadLibrary）
+- `functionToBlur` 改为空方法
+
+**Java 层**：
+- 同样的修改
+- 移除 `native` 关键字
+
+代价：拍照搜题功能里图片不再做本地模糊（不影响课程表核心功能）
 
 ---
 
-## 重新打包方法
+## 两种用法
+
+### A. 直接装 APK
 
 ```bash
-APKSIGNER=$ANDROID_HOME/build-tools/35.0.0/apksigner
-ZIPALIGN=$ANDROID_HOME/build-tools/35.0.0/zipalign
-
-# 1. 重新打包
-java -jar tools/apktool.jar b wakeup_decoded -o out.apk
-
-# 2. zipalign
-$ZIPALIGN -p -f 4 out.apk aligned.apk
-
-# 3. v1+v2+v3 签名
-$APKSIGNER sign \
-  --ks dist/debug.keystore \
-  --ks-pass pass:wakeup123 \
-  --ks-key-alias wakeupmod \
-  --key-pass pass:wakeup123 \
-  --v1-signing-enabled true \
-  --v2-signing-enabled true \
-  --v3-signing-enabled true \
-  --out dist/WakeUp_6.1.06_noad.apk \
-  aligned.apk
+adb install dist/WakeUp_6.1.06_noad.apk
 ```
+
+APK MD5: `99815c0f28cf0055230586dcfe6d0db7`
+
+### B. 编译源码工程
+
+```bash
+cd wakeup-android-project
+./gradlew assembleDebug
+# 输出: app/build/outputs/apk/debug/app-debug.apk
+```
+
+详见 `wakeup-android-project/BUILD.md`
 
 ---
 
@@ -128,7 +123,6 @@ $APKSIGNER sign \
 | targetSdkVersion | 35 (Android 15) |
 | 签名 | v1 + v2 + v3 |
 | keystore | dist/debug.keystore (alias: wakeupmod, password: wakeup123) |
-| MD5 | 99815c0f28cf0055230586dcfe6d0db7 |
 | 大小 | 27MB |
 
 ---
@@ -139,6 +133,7 @@ $APKSIGNER sign \
 2. **微信登录 / 推送**：可能因签名改变失效
 3. **云同步**：依赖作业帮账号的服务可能受影响
 4. **必须先卸载原版**才能装新版（签名不同）
+5. **Java 源码工程编译会有一堆错误**：jadx 反编译固有问题（混淆类、lambda、类型擦除），需要逐个修
 
 ---
 
@@ -150,7 +145,11 @@ $APKSIGNER sign \
 | jadx | 1.5.3 |
 | apksigner | build-tools 35.0.0 |
 | zipalign | build-tools 35.0.0 |
-| uber-apk-signer | 1.3.0 |
+| Gradle | 8.7 |
+| Android Gradle Plugin | 8.5.0 |
+| Kotlin | 1.9.24 |
+| Java target | 17 |
+| compileSdk | 35 |
 
 ---
 

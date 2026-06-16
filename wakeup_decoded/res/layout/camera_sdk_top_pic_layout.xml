@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/tab_root_view" android:background="@drawable/bg_pic_mode_one" android:layout_width="69.0dip" android:layout_height="28.0dip" android:layout_marginEnd="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_vertical" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/sdk_camera_pic_many" android:layout_marginStart="12.0dip" />
-    <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="多页" android:layout_marginEnd="11.0dip" />
-</FrameLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="66.0dip" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:id="@id/rl_camera_gallery_1" android:layout_width="53.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
-        <com.zybang.camera.view.RotateAnimImageView android:id="@id/camera_gallery_1" android:layout_width="@dimen/camera_gallery_width" android:layout_height="@dimen/camera_gallery_width" android:layout_marginTop="6.5dip" android:src="@drawable/fuse_search_camera_gallery" android:scaleType="centerCrop" android:layout_centerHorizontal="true" app:corner_radius="10.0dip" app:is_cover_src="true" />
-        <View android:id="@id/camera_gallery_out_border_1" android:background="@drawable/fuse_search_round_10_bg" android:layout_width="@dimen/camera_gallery_width" android:layout_height="@dimen/camera_gallery_width" android:layout_marginTop="6.5dip" android:layout_centerHorizontal="true" />
-        <TextView android:textSize="11.0sp" android:textColor="#80ffffff" android:id="@id/tv_camera_gallery_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="相册导入" android:includeFontPadding="false" android:layout_below="@id/camera_gallery_1" android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-</RelativeLayout>

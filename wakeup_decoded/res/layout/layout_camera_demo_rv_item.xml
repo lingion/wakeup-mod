@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:id="@id/camera_demo_card" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardCornerRadius="22.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.zybang.camera.view.SecureImageView android:layout_gravity="center" android:id="@id/iv_demo_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
-    <com.zybang.camera.view.SecureImageView android:layout_gravity="right" android:id="@id/item_demo_close" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/fuse_demo_close_icon" android:scaleType="fitXY" />
-</androidx.cardview.widget.CardView>

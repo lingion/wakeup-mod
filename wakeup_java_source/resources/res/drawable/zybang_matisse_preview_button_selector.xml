@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:state_enabled="false"
-        android:drawable="@drawable/zybang_matisse_ic_button_preview_disable"/>
-    <item android:drawable="@drawable/zybang_matisse_ic_button_preview_enable"/>
-</selector>

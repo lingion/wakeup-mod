@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/main_activity_root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.baidu.homework.common.ui.widget.NoScrollViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="0.0dip" />
-    <com.suda.yzune.wakeupschedule.widget.MainAiTitleTabView android:layout_gravity="bottom" android:id="@id/ai_title_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</FrameLayout>

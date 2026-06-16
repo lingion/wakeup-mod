@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="100.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
-        <ProgressBar android:id="@id/iknow_alert_dialog_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:max="10000" style="?android:progressBarStyleLarge" />
-        <TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:layout_gravity="center_vertical" android:id="@id/iknow_alert_dialog_progress_message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    </LinearLayout>
-</FrameLayout>

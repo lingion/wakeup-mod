@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="52.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/sl_style_left_iv" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/c3_1" android:layout_centerVertical="true" />
-    <TextView android:textSize="16.0sp" android:textColor="@color/c1_1" android:ellipsize="end" android:id="@id/sl_style_left_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="90.0dip" android:text="为你为你推荐为你推荐为你推荐为你推荐为你推荐推荐" android:singleLine="true" android:includeFontPadding="false" android:layout_toRightOf="@id/sl_style_left_iv" android:layout_centerVertical="true" />
-</RelativeLayout>

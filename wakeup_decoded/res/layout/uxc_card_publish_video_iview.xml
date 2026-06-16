@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/video_rl" android:layout_width="fill_parent" android:layout_height="185.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.zuoyebang.design.widget.RoundRecyclingImageView android:id="@id/video_bg" android:layout_width="fill_parent" android:layout_height="185.0dip" android:src="@drawable/common_uxc_placeholder_loading" android:scaleType="centerCrop" app:corner_radius="@dimen/F_Small" />
-    <ImageView android:id="@id/video_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/uxc_card_video_icon" android:layout_centerInParent="true" />
-    <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:id="@id/video_time" android:background="@drawable/uxc_card_video_time_bg" android:paddingLeft="4.0dip" android:paddingTop="2.0dip" android:paddingRight="4.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="00:19" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
-</RelativeLayout>

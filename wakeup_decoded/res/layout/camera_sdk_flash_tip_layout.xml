@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="240.0dip" android:layout_height="240.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/camera_flash_tip_top" android:background="@drawable/camera_light_tip_top_align" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
-    <View android:id="@id/camera_flash_tip_top_close" android:layout_width="40.0dip" android:layout_height="40.0dip" app:layout_constraintRight_toRightOf="@id/camera_flash_tip_top" app:layout_constraintTop_toTopOf="@id/camera_flash_tip_top" />
-    <ImageView android:id="@id/camera_flash_tip_left_right" android:background="@drawable/camera_light_tip_left_align" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="93.0dip" android:rotation="270.0" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <View android:id="@id/camera_flash_tip_left_close" android:layout_width="40.0dip" android:layout_height="40.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>

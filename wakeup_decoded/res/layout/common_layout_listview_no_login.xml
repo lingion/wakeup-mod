@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.zuoyebang.design.widget.empty.UxcEmptyView android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:button_text="@string/user_activity_unlogin_login_button" app:content_text="@string/uxc_not_login" app:hint_image_src="@drawable/uxc_empty_content_null" />
-</RelativeLayout>

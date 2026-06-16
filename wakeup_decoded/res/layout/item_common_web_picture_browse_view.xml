@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.suda.yzune.wakeupschedule.aaa.widget.TouchImageView android:id="@id/touchImageViewPre" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="matrix" android:layout_centerInParent="true" />
-    <RelativeLayout android:id="@id/common_photo_rl_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
-        <ImageView android:id="@id/common_photo_iv_loading" android:layout_width="90.0dip" android:layout_height="90.0dip" />
-    </RelativeLayout>
-</RelativeLayout>

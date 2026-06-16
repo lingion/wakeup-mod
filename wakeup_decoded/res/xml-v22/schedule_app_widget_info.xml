@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<appwidget-provider android:description="@string/week_widget_description" android:minWidth="250.0dip" android:minHeight="110.0dip" android:updatePeriodMillis="1800000" android:initialLayout="@layout/schedule_app_widget" android:configure="com.suda.yzune.wakeupschedule.schedule_appwidget.WeekScheduleAppWidgetConfigActivity" android:previewImage="@drawable/week_widget_preview" android:resizeMode="horizontal|vertical" android:widgetCategory="home_screen" android:widgetFeatures="reconfigurable"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

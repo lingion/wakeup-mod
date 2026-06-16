@@ -1,6 +1,0 @@
-.class public interface abstract Lcom/kwad/components/core/offline/a/d/a;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lcom/kwad/sdk/components/b;

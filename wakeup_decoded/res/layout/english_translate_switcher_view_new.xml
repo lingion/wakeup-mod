@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/translate_root" android:background="@drawable/bg_pic_mode_one" android:layout_width="100.0dip" android:layout_height="28.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.appcompat.widget.AppCompatTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tv_translate_from" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="英语" android:layout_marginStart="12.0dip" />
-    <androidx.appcompat.widget.AppCompatImageView android:id="@id/image_switch_translate_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/translate_type_change_camerasdk_new" />
-    <androidx.appcompat.widget.AppCompatTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tv_translate_to" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="中文" />
-    <androidx.appcompat.widget.AppCompatTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_translate_other" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="仅支持英译中" />
-</LinearLayout>

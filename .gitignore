@@ -1,24 +1,33 @@
-# Builds
-*.apk
-*.jar
-!dist/debug.keystore
-
-# IDE
+# IDE / OS
 .idea/
 .vscode/
 *.iml
-
-# OS
 .DS_Store
 Thumbs.db
-
-# Logs
 *.log
 
-# 不要忽略 jadx 输出
-!wakeup_java_source/
-!wakeup_decoded/
+# Gradle
+.gradle/
+build/
+local.properties
+*.apk
 
-# 不要忽略 docs
-!README.md
-!PATCHES.md
+# LFS 跟踪大文件
+*.apk filter=lfs diff=lfs merge=lfs -text
+*.keystore filter=lfs diff=lfs merge=lfs -text
+
+# 完整反编译产物 (太大了，只保留 patch 点)
+wakeup_decoded/lib/
+wakeup_decoded/res/raw/
+wakeup_decoded/res/drawable-*/*.*
+wakeup_decoded/res/mipmap-*/*.*
+wakeup_java_source/
+
+# 原始 APK (太大了，放 release page)
+original/*.apk filter=lfs diff=lfs merge=lfs -text
+
+# 只保留关键 patch 过的 smali 文件
+!wakeup_decoded/smali_classes4/com/suda/yzune/wakeupschedule/SplashActivity.smali
+!wakeup_decoded/smali_classes4/com/suda/yzune/wakeupschedule/aaa/utils/OooOOOO.smali
+!wakeup_decoded/smali_classes4/com/suda/yzune/wakeupschedule/aaa/activity/questionsearch/camera/blur/NativeBlurProcess.smali
+!wakeup_decoded/smali_classes3/com/enrique/stackblur/NativeBlurProcess.smali

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="wrap_content" android:layout_height="120.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/id_ad_close" android:background="@drawable/bg_solid_trans_top_end" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关闭" android:layout_alignParentEnd="true" />
-    <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/id_feed_back" android:background="@drawable/bg_solid_trans_top_end" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我要反馈" android:layout_alignParentBottom="true" android:layout_marginEnd="3.5dip" android:layout_toStartOf="@id/id_ad_no_ad" android:layout_alignParentEnd="true" />
-    <com.homework.fastad.view.MarqueeTextView android:textSize="10.0sp" android:textColor="#ffffffff" android:ellipsize="none" android:id="@id/id_ad_no_ad" android:background="@drawable/bg_solid_trans_top_end" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="100.0dip" android:text="纯净无广告" android:singleLine="true" android:drawableStart="@drawable/icon_no_ad_left" android:layout_marginEnd="6.0dip" android:layout_toStartOf="@id/id_ad_close" />
-</RelativeLayout>

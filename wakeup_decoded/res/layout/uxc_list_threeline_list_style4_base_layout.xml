@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="104.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/c1_2" android:ellipsize="end" android:id="@id/tls_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2017-2018学年北京101中学七年2018学年北京101中学七年" android:maxLines="2" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:lineSpacingExtra="6.5dip" />
-    <TextView android:textSize="12.0sp" android:textColor="@color/c1_4" android:ellipsize="end" android:id="@id/tls_content_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2671位同学练过" android:singleLine="true" android:includeFontPadding="false" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
-</RelativeLayout>

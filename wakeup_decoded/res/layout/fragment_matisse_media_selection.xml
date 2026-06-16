@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="?page.bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview" android:paddingTop="@dimen/media_grid_spacing" android:paddingBottom="@dimen/media_grid_spacing" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <FrameLayout android:id="@id/empty_view" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <TextView android:textSize="16.0sp" android:textColor="?album.emptyView.textColor" android:gravity="center" android:layout_gravity="center" android:id="@id/empty_view_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_text" android:drawableTop="?album.emptyView" android:drawablePadding="8.0dip" />
-    </FrameLayout>
-</FrameLayout>

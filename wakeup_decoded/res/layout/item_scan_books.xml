@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.com.zmzx.college.search.widget.roundimageview.widget.RoundCornerImageView android:id="@id/item_book_img" android:layout_width="55.0dip" android:layout_height="75.5dip" android:scaleType="fitXY" android:layout_marginStart="10.559998dip" app:bottomLeftRadius="8.0px" app:bottomRightRadius="8.0px" app:topLeftRadius="8.0px" app:topRightRadius="8.0px" />
-</FrameLayout>
