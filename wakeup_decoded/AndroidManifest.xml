@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" package="com.suda.yzune.wakeupschedule" platformBuildVersionCode="35" platformBuildVersionName="15">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
@@ -12,18 +17,18 @@
         <package android:name="com.tencent.mm"/>
         <package android:name="com.tencent.mobileqq"/>
         <package android:name="com.alibaba.android.rimet"/>
-        
+        <package android:name="com.baidu.homework"/>
         <package android:name="com.zuoyebang.airclass"/>
-        
+        <package android:name="com.zybang.parent"/>
         <package android:name="com.zuoyebang.knowledge"/>
         <package android:name="net.haozaixian"/>
         <package android:name="com.haokebang.learning"/>
         <package android:name="com.kuaiduizuoye.scan"/>
         <package android:name="com.zuoyebang.xiaolusuyang"/>
-        
+        <package android:name="com.zybang.bfsports"/>
         <package android:name="com.zuoyebang.bangbangshizi"/>
         <package android:name="com.sxjy.PaopaoPinyin"/>
-        
+        <package android:name="com.zybang.yayaxiezi"/>
         <package android:name="com.zuoyebang.zhixuejiang"/>
         <package android:name="com.zuoyebang.zybbook"/>
         <package android:name="com.zmzx.college.search"/>
@@ -116,20 +121,25 @@
     <uses-permission android:name="com.vivo.aiengine.permission.READ_AWARE_PROVIDER"/>
     <uses-permission android:name="com.vivo.aiengine.permission.WRITE_AWARE_PROVIDER"/>
     <uses-permission android:name="com.hihonor.brain.permission.KIT_SERVICE_ACCESS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
     <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
     <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="com.suda.yzune.wakeupschedule.openadsdk.permission.TT_PANGOLIN"/>
     <permission android:name="com.suda.yzune.wakeupschedule.openadsdk.permission.TT_PANGOLIN" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <permission android:name="com.suda.yzune.wakeupschedule.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="com.suda.yzune.wakeupschedule.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
     <uses-permission android:name="android.permission.REORDER_TASKS"/>
     <uses-permission android:name="freemme.permission.msa"/>
     <uses-permission android:name="freemme.permission.msa.SECURITY_ACCESS"/>
@@ -224,7 +234,7 @@
         <activity android:label="咩咩" android:name="com.suda.yzune.wakeupschedule.intro.IntroYoungActivity" android:screenOrientation="portrait"/>
         
         
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.suda.yzune.wakeupschedule.aaa.activity.search.whole.PicManySearchBActivity" android:screenOrientation="portrait" android:theme="@style/PicSearchActivityTheme"/>
+        
         
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.suda.yzune.wakeupschedule.aaa.activity.login.SYLoginActivity" android:screenOrientation="portrait" android:theme="@style/HomeworkActivityTheme"/>
         
@@ -261,15 +271,17 @@
             <meta-data android:name="vivo.widget.description" android:resource="@string/today_widget_description"/>
         </receiver>
         <meta-data android:name="com.hihonor.intelligence.suggestion-kit.enableFlag" android:value="true"/>
-        <activity android:exported="true" android:name="com.zybang.camera.activity.PhotoCameraSDKActivity" android:screenOrientation="portrait" android:theme="@style/CameraCropActivityTheme"/>
-        <activity android:exported="true" android:name="com.zybang.camera.activity.SearchCameraSDKActivity" android:screenOrientation="portrait" android:theme="@style/CameraCropActivityTheme"/>
-        <activity android:exported="true" android:name="com.zybang.camera.activity.PhotoCropSDKActivity" android:screenOrientation="portrait" android:theme="@style/CameraCropActivityTheme"/>
-        <activity android:exported="true" android:name="com.zybang.camera.activity.CameraSDKBaseActivity" android:screenOrientation="portrait" android:theme="@style/CameraCropActivityTheme"/>
-        <activity android:exported="true" android:name="com.zybang.camera.activity.SystemCameraSDKActivity" android:screenOrientation="portrait" android:theme="@style/CameraCropActivityTheme"/>
+        
+        
+        
+        
+        
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.zuoyebang.page.activity.BaseCacheHybridActivity" android:theme="@style/HybridCacheActivityTheme"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.zuoyebang.page.activity.debug.DebugHybridActivity" android:theme="@style/HybridCacheActivityTheme"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.zuoyebang.page.activity.debug.DebugHybridRouterViewerActivity" android:theme="@style/HybridCacheActivityTheme"/>
+        <provider android:authorities="com.suda.yzune.wakeupschedule.AbtestLifeCycleProviderImpl" android:exported="false" android:name="com.homework.abtest.internal.cycle.AbtestLifeCycleProviderImpl"/>
+        <activity android:name="com.homework.fastad.util.FastAdDebugActivity" android:screenOrientation="portrait"/>
         <activity android:launchMode="singleTask" android:name="com.homework.fastad.common.web.ApiWebActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"/>
         <activity android:launchMode="singleTask" android:name="com.homework.fastad.common.web.ApiAgreementActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"/>
         <activity android:name="com.homework.fastad.reward.RewardDialogActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
@@ -295,8 +307,8 @@
         <activity android:name="com.zuoyebang.design.test.TestTabBarActivity"/>
         <activity android:name="com.zuoyebang.design.test.TestMenuActivity"/>
         <activity android:name="com.zuoyebang.design.test.TestCommonActivity"/>
-        <activity android:launchMode="singleTop" android:name="com.zybang.permission.PermissionRequireActivity" android:process=":permission" android:screenOrientation="portrait" android:theme="@style/Theme.AppStartLoad"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.zybang.permission.PermissionProcessRequireActivity" android:process=":permission" android:theme="@style/Permission.Theme.Activity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        
+        
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="standard" android:name="com.yanzhenjie.permission.PermissionActivity" android:theme="@style/Permission.Theme.Activity" android:windowSoftInputMode="stateAlwaysHidden"/>
         <provider android:authorities="com.suda.yzune.wakeupschedule.file.path.share" android:exported="false" android:grantUriPermissions="true" android:name="com.yanzhenjie.permission.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/permission_file_paths"/>

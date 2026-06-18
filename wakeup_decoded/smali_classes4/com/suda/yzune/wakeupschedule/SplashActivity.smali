@@ -989,7 +989,7 @@
     .line 70
     .line 71
     .line 72
-    nop
+    invoke-static {}, Lcom/tencent/bugly/launch/AppLaunchProxy;->getAppLaunch()Lcom/tencent/bugly/launch/AppLaunch;
 
     .line 73
     .line 74
@@ -997,12 +997,12 @@
     move-result-object v1
 
     .line 76
-    nop
+    invoke-interface {v1, v0}, Lcom/tencent/bugly/launch/AppLaunch;->addTag(Ljava/lang/String;)V
 
     .line 77
     .line 78
     .line 79
-    nop
+    invoke-static {}, Lcom/tencent/bugly/launch/AppLaunchProxy;->getAppLaunch()Lcom/tencent/bugly/launch/AppLaunch;
 
     .line 80
     .line 81
@@ -1010,7 +1010,7 @@
     move-result-object v0
 
     .line 83
-    nop
+    invoke-interface {v0}, Lcom/tencent/bugly/launch/AppLaunch;->reportAppFullLaunch()V
 
     .line 84
     .line 85
@@ -1302,7 +1302,7 @@
 
     .line 8
     .line 9
-    nop
+    invoke-static {}, Lcom/tencent/bugly/launch/AppLaunchProxy;->getAppLaunch()Lcom/tencent/bugly/launch/AppLaunch;
 
     .line 10
     .line 11
@@ -1310,7 +1310,7 @@
     move-result-object v0
 
     .line 13
-    nop
+    invoke-interface {v0}, Lcom/tencent/bugly/launch/AppLaunch;->reportAppFullLaunch()V
 
     .line 14
     .line 15
