@@ -21,6 +21,7 @@
 - **原生 .so 全清** — 34 个 native 库全部删除（libttmplayer、libdpsdk、libMNN、libcronet、libkwad…），APK 不含任何 .so → Android 16 arm64 兼容，无 32-bit-only 限制
 - **热启动 / 开屏广告关闭** — `OooOOOO.smali` 两个广告开关改为 `return false`
 - **拍照搜题完整移除** — 从入口按钮到底层 smali 全部清除（详见下方）
+- **上游版本更新链路切断** — AboutActivity 点击"版本"不再请求 API，直接显示"已是最新版本"
 
 ---
 
