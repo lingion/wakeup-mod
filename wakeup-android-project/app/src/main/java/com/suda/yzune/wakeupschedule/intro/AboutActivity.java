@@ -20,40 +20,30 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bykv.vk.component.ttvideo.player.C;
-import com.bykv.vk.component.ttvideo.player.MediaPlayer;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.ss.android.download.api.constant.BaseConstants;
 import com.suda.yzune.wakeupschedule.R;
-import com.suda.yzune.wakeupschedule.UpdateFragment;
 import com.suda.yzune.wakeupschedule.aaa.utils.o0000oo;
 import com.suda.yzune.wakeupschedule.base_view.BaseActivity;
-import com.suda.yzune.wakeupschedule.bean.MyResponse;
-import com.suda.yzune.wakeupschedule.bean.UpdateInfo;
 import com.suda.yzune.wakeupschedule.databinding.ActivityAboutBinding;
 import com.suda.yzune.wakeupschedule.schedule.DonateFragment;
 import com.suda.yzune.wakeupschedule.settings.SettingItemAdapter;
 import com.suda.yzune.wakeupschedule.utils.ViewUtils;
 import com.suda.yzune.wakeupschedule.utils.o000OOo;
-import com.suda.yzune.wakeupschedule.utils.o00O0O;
-import com.suda.yzune.wakeupschedule.utils.o00Ooo;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.o0OoOo0;
-import kotlin.o0OOO0o;
 import o00OOooo.o0000;
 import o00OOooo.o000000;
 import o00OOooo.o000000O;
 import o00OOooo.o0000Ooo;
 import o00OOooo.o0O0O00;
 import o0O0o0Oo.o00000OO;
-import okhttp3.ResponseBody;
 
 /* loaded from: classes4.dex */
 public final class AboutActivity extends BaseActivity {
@@ -145,59 +135,19 @@ public final class AboutActivity extends BaseActivity {
                 }).show();
                 break;
             case R.string.about_version /* 2131951652 */:
-                o00O0O o00o0oOooO0Oo = o00Ooo.f9699OooO0OO.OooO00o().OooO0Oo();
-                final int i = MediaPlayer.MEDIA_PLAYER_OPTION_ENABLE_STALL_COUNTER;
-                o00o0oOooO0Oo.OooO0OO(MediaPlayer.MEDIA_PLAYER_OPTION_ENABLE_STALL_COUNTER).OooO0OO(new retrofit2.OooO0o() { // from class: com.suda.yzune.wakeupschedule.intro.AboutActivity$onHorizontalItemClick$1
-                    @Override // retrofit2.OooO0o
-                    public void OooO00o(retrofit2.OooO0O0 oooO0O0, Throwable th) {
-                        ActivityAboutBinding activityAboutBinding = this.f8492OooO00o.f8489OooO0o;
-                        if (activityAboutBinding == null) {
-                            o0OoOo0.OooOoO0("binding");
-                            activityAboutBinding = null;
-                        }
-                        CoordinatorLayout coordinator = activityAboutBinding.f8146OooO0oO;
-                        o0OoOo0.OooO0o(coordinator, "coordinator");
-                        String string = coordinator.getContext().getString(R.string.tips_check_update_failed);
-                        o0OoOo0.OooO0o(string, "getString(...)");
-                        Snackbar snackbarMake = Snackbar.make(coordinator, string, -1);
-                        o0OoOo0.OooO0o(snackbarMake, "make(...)");
-                        snackbarMake.show();
-                    }
-
-                    @Override // retrofit2.OooO0o
-                    public void OooO0O0(retrofit2.OooO0O0 oooO0O0, retrofit2.o000000O o000000o3) {
-                        ActivityAboutBinding activityAboutBinding = null;
-                        if ((o000000o3 != null ? (ResponseBody) o000000o3.OooO00o() : null) != null) {
-                            Gson gson = new Gson();
-                            try {
-                                Object objOooO00o = o000000o3.OooO00o();
-                                o0OoOo0.OooO0Oo(objOooO00o);
-                                MyResponse myResponse = (MyResponse) gson.fromJson(((ResponseBody) objOooO00o).string(), new TypeToken<MyResponse<UpdateInfo>>() { // from class: com.suda.yzune.wakeupschedule.intro.AboutActivity$onHorizontalItemClick$1$onResponse$updateInfo$1
-                                }.getType());
-                                if (((UpdateInfo) myResponse.getData()).getId() > i) {
-                                    UpdateFragment.f6647OooO.OooO00o(((UpdateInfo) myResponse.getData()).getVersionName(), ((UpdateInfo) myResponse.getData()).getVersionInfo()).show(this.f8492OooO00o.getSupportFragmentManager(), "updateDialog");
-                                    o0OOO0o o0ooo0o = o0OOO0o.f13233OooO00o;
-                                    return;
-                                }
-                                ActivityAboutBinding activityAboutBinding2 = this.f8492OooO00o.f8489OooO0o;
-                                if (activityAboutBinding2 == null) {
-                                    o0OoOo0.OooOoO0("binding");
-                                } else {
-                                    activityAboutBinding = activityAboutBinding2;
-                                }
-                                CoordinatorLayout coordinator = activityAboutBinding.f8146OooO0oO;
-                                o0OoOo0.OooO0o(coordinator, "coordinator");
-                                String string = coordinator.getContext().getString(R.string.tips_latest_version);
-                                o0OoOo0.OooO0o(string, "getString(...)");
-                                Snackbar snackbarMake = Snackbar.make(coordinator, string, -1);
-                                o0OoOo0.OooO0o(snackbarMake, "make(...)");
-                                snackbarMake.show();
-                            } catch (Exception unused2) {
-                                o0OOO0o o0ooo0o2 = o0OOO0o.f13233OooO00o;
-                            }
-                        }
-                    }
-                });
+                // [MOD] WakeUp-Mod: cut upstream version check, no network call
+                ActivityAboutBinding binding = this.f8489OooO0o;
+                if (binding == null) {
+                    o0OoOo0.OooOoO0("binding");
+                    binding = null;
+                }
+                CoordinatorLayout coord = binding.f8146OooO0oO;
+                o0OoOo0.OooO0o(coord, "coordinator");
+                String txt = coord.getContext().getString(R.string.tips_latest_version);
+                o0OoOo0.OooO0o(txt, "getString(...)");
+                Snackbar sb = Snackbar.make(coord, txt, -1);
+                o0OoOo0.OooO0o(sb, "make(...)");
+                sb.show();
                 break;
             case R.string.about_wechat_public /* 2131951653 */:
                 o0OOO0o(o000000o2.OooO());
