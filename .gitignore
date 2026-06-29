@@ -10,7 +10,7 @@ Thumbs.db
 .gradle/
 build/
 local.properties
-*.apk
+# *.apk  # tracked now (release artifact)
 
 # LFS 跟踪大文件
 *.apk filter=lfs diff=lfs merge=lfs -text

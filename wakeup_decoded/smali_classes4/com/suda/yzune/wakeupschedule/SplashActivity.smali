@@ -936,7 +936,7 @@
 
     .line 45
     .line 46
-    invoke-static {v0}, Lcom/baidu/homework/common/utils/OooOo;->OooO0O0(Ljava/lang/Enum;)Z
+    const/4 v0, 0x0
 
     .line 47
     .line 48
@@ -989,7 +989,7 @@
     .line 70
     .line 71
     .line 72
-    invoke-static {}, Lcom/tencent/bugly/launch/AppLaunchProxy;->getAppLaunch()Lcom/tencent/bugly/launch/AppLaunch;
+    nop
 
     .line 73
     .line 74
@@ -997,12 +997,12 @@
     move-result-object v1
 
     .line 76
-    invoke-interface {v1, v0}, Lcom/tencent/bugly/launch/AppLaunch;->addTag(Ljava/lang/String;)V
+    nop
 
     .line 77
     .line 78
     .line 79
-    invoke-static {}, Lcom/tencent/bugly/launch/AppLaunchProxy;->getAppLaunch()Lcom/tencent/bugly/launch/AppLaunch;
+    nop
 
     .line 80
     .line 81
@@ -1010,7 +1010,7 @@
     move-result-object v0
 
     .line 83
-    invoke-interface {v0}, Lcom/tencent/bugly/launch/AppLaunch;->reportAppFullLaunch()V
+    nop
 
     .line 84
     .line 85
@@ -1302,7 +1302,7 @@
 
     .line 8
     .line 9
-    invoke-static {}, Lcom/tencent/bugly/launch/AppLaunchProxy;->getAppLaunch()Lcom/tencent/bugly/launch/AppLaunch;
+    nop
 
     .line 10
     .line 11
@@ -1310,7 +1310,7 @@
     move-result-object v0
 
     .line 13
-    invoke-interface {v0}, Lcom/tencent/bugly/launch/AppLaunch;->reportAppFullLaunch()V
+    nop
 
     .line 14
     .line 15

@@ -188,7 +188,7 @@ dependencies {
     implementation("net.sf.biweekly:biweekly:0.6.7")
 
     // 权限框架
-    implementation("com.yanzhenjie:permission:2.0.3")
+    // implementation("com.yanzhenjie:permission:2.0.3") // not in maven central, not referenced in code
 
     // 悬浮窗/Hybrid
     implementation("io.ktor:ktor-client-core:2.3.12")
