@@ -1,4 +1,13 @@
-# WakeUp 课程表 v19 — 去广告 + 去拍照搜题
+<p align="center">
+  <a href="https://github.com/lingion/wakeup-mod/stargazers"><img src="https://img.shields.io/github/stars/lingion/wakeup-mod?style=for-the-badge&logo=github&color=FFD700" alt="Stars"></a>
+  <a href="https://github.com/lingion/wakeup-mod/network/members"><img src="https://img.shields.io/github/forks/lingion/wakeup-mod?style=for-the-badge&logo=github&color=8B5CF6" alt="Forks"></a>
+  <a href="https://github.com/lingion/wakeup-mod/issues"><img src="https://img.shields.io/github/issues/lingion/wakeup-mod?style=for-the-badge&logo=github&color=EF4444" alt="Issues"></a>
+  <a href="https://github.com/lingion/wakeup-mod/blob/main/LICENSE"><img src="https://img.shields.io/github/license/lingion/wakeup-mod?style=for-the-badge&logo=github&color=10B981" alt="License"></a>
+  <br>
+  <a href="https://github.com/lingion/wakeup-mod/commits/main"><img src="https://img.shields.io/github/last-commit/lingion/wakeup-mod?style=flat-square" alt="Last commit"></a>
+  <a href="https://www.android.com/"><img src="https://img.shields.io/badge/Android-Reverse--Engineered-3DDC84?style=flat-square&logo=android" alt="Android RE"></a>
+  <a href="https://source.android.com/"><img src="https://img.shields.io/badge/Smali-Patched-A4C639?style=flat-square" alt="Smali"></a>
+</p>
 
 基于 **WakeUp 课程表 v6.1.06 (com.suda.yzune.wakeupschedule)** 逆向修改，构建无广告 + 拍照搜题完整移除的纯净 APK，Android 16 arm64 兼容。
 
