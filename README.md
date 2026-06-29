@@ -1,6 +1,6 @@
-# WakeUp 课程表 v19 — 去广告 + 去拍照搜题
+# WakeUp 课程表 v20 — 去广告 + 去拍照搜题 + 切断上游版本检查
 
-基于 **WakeUp 课程表 v6.1.06 (com.suda.yzune.wakeupschedule)** 逆向修改，构建无广告 + 拍照搜题完整移除的纯净 APK，Android 16 arm64 兼容。
+基于 **WakeUp 课程表 v6.1.06 (com.suda.yzune.wakeupschedule)** 逆向修改，构建无广告 + 拍照搜题完整移除 + 上游版本升级链路切断的纯净 APK，Android 16 arm64 兼容。
 
 ⚠️ **仅供学习与个人使用，请勿用于商业用途。**
 
@@ -10,8 +10,27 @@
 
 | 版本 | 文件 | 大小 | 说明 |
 |------|------|------|------|
-| 去广告 + 去拍照 | `WakeUp_6.1.06_nophoto.apk` | 24MB | 推荐。广告已除，拍照搜题入口完整移除 |
-| 去广告 | `WakeUp_6.1.06_noad.apk` | 27MB | 仅去广告，保留拍照搜题入口（SDK 已剥，无法使用） |
+| 去广告 + 去拍照 + 去升级 | `WakeUp_6.1.06_noversion.apk` | 27MB | **v20 推荐**。彻底切断上游版本检查，AboutActivity 点"检查更新"永远 toast "当前已是最新版本" |
+
+---
+
+## v20 修复 (本次)
+
+**v19 README 撒谎了**：当时声称"上游版本更新链路切断"，实际 `AboutActivity$onHorizontalItemClick$1` 的两个回调方法（success/failure）完全没有 patch。点 AboutActivity 的"检查更新"按钮，仍然会：
+
+1. POST 到 `api-base-wuf.suanshubang.com/pluto/publish/checkappupdate`
+2. 拿到上游 versionCode > 你的 → show UpdateFragment dialog "新版更有趣，尽快升级哦" + "立即升级" 按钮
+3. 一点"立即升级" → 跳应用市场 → 装回原版（带广告 + 拍照搜题）
+
+v20 修复：
+
+- **`AboutActivity$onHorizontalItemClick$1$OooO0O0` (success 回调)** — 替换为直接 toast `R.string.tips_latest_version`，不再 parse JSON，不再 show UpdateFragment
+- **`AboutActivity$onHorizontalItemClick$1$OooO00o` (failure 回调)** — 同样替换为 toast "当前已是最新版本"（避免用户看到"网络错误"困惑）
+- **`UpdateFragment.onViewCreated`** — 保持 v19 已有的 no-op（双重保险）
+
+**结果**：AboutActivity 点"检查更新" → 立即弹 toast "当前已是最新版本" → 没有任何 dialog 可以点"升级"。
+
+详见 `PATCHES.md` Patch 5。
 
 ---
 
@@ -21,7 +40,7 @@
 - **原生 .so 全清** — 34 个 native 库全部删除（libttmplayer、libdpsdk、libMNN、libcronet、libkwad…），APK 不含任何 .so → Android 16 arm64 兼容，无 32-bit-only 限制
 - **热启动 / 开屏广告关闭** — `OooOOOO.smali` 两个广告开关改为 `return false`
 - **拍照搜题完整移除** — 从入口按钮到底层 smali 全部清除（详见下方）
-- **上游版本更新链路切断** — AboutActivity 点击"版本"不再请求 API，直接显示"已是最新版本"
+- **上游版本更新链路切断** ⚠️ *v19 README 声称已切断，实际回调未触及。v20 修复*
 
 ---
 
