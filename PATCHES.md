@@ -60,7 +60,9 @@
 
 ### 3a. `com/suda/yzune/wakeupschedule/aaa/activity/questionsearch/camera/blur/NativeBlurProcess.smali`
 
-**Diff**：
+v19 已将整个 `questionsearch` 目录删除，该文件已不存在，无需单独 patch（`<clinit>` 的 loadLibrary 与 native functionToBlur 随目录一起消失，不构成 UnsatisfiedLinkError）。
+
+**Diff**（仅存档，对应 v19 之前状态）：
 ```diff
  .method static constructor <clinit>()V
 -    .locals 2
@@ -93,7 +95,7 @@
 
 ### 3b. `com/enrique/stackblur/NativeBlurProcess.smali`
 
-同样 patch：`<clinit>` 改为空，`functionToBlur` 改为空方法。
+保留在 smali_classes3，需 patch：`<clinit>` 改为空，`functionToBlur` 去掉 `.native` 改为空方法。
 
 ---
 
@@ -103,7 +105,7 @@
 rm -rf wakeup_decoded/lib/
 ```
 
-具体删除文件见 README.md 表格。
+原 `WakeUp_6.1.06_original.apk` 内 `lib/armeabi-v7a/` 含 30 个 .so（约 12MB），全部删除。具体文件名见 `unzip -l original/WakeUp_6.1.06_original.apk | grep '\.so$'` 输出。
 
 ---
 
@@ -128,13 +130,13 @@ rm -rf wakeup_decoded/lib/
 **文件**：
 - `wakeup_decoded/smali_classes4/com/suda/yzune/wakeupschedule/intro/AboutActivity$onHorizontalItemClick$1.smali`
 
-**方法 1**：`OooO0O0(success)` — 原 322 行 → 新 9 行：
+**方法 1**：`OooO0O0(success)` — 现 smali 中方法体共 9 行有效指令（const v0 = 0x7f1303fa → getString → OooOOo(Toast) → Toast.show() → return-void）：
 
 ```smali
 .method public OooO0O0(Lretrofit2/OooO0O0;Lretrofit2/o000000O;)V
     .locals 3
     iget-object p1, p0, Lcom/suda/yzune/wakeupschedule/intro/AboutActivity$onHorizontalItemClick$1;->OooO00o:Lcom/suda/yzune/wakeupschedule/intro/AboutActivity;
-    const v0, 0x7f1303fa  # R.string.tips_latest_version
+    const v0, 0x7f1303fa
     invoke-virtual {p1, v0}, Lcom/suda/yzune/wakeupschedule/intro/AboutActivity;->getString(I)Ljava/lang/String;
     move-result-object p2
     const/4 v1, 0x0

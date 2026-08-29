@@ -11,9 +11,9 @@
 
 # WakeUp 课程表 v20 — 去广告 + 去拍照搜题 + 切断上游版本检查
 
-基于 **WakeUp 课程表 v6.1.06 (com.suda.yzune.wakeupschedule)** 逆向修改，构建无广告 + 拍照搜题完整移除 + 上游版本升级链路切断的纯净 APK，Android 16 arm64 兼容。
+基于 **WakeUp 课程表 v6.1.06 (com.suda.yzune.wakeupschedule)** 逆向修改，构建无广告 + 拍照搜题完整移除 + 上游版本升级链路切断的纯净 APK，targetSdk 35（Android 15），不含任何 .so，跨 ABI 兼容。
 
-⚠️ **仅供学习与个人使用，请勿用于商业用途。**
+⚠ **仅供学习与个人使用，请勿用于商业用途。**
 
 ---
 
@@ -47,8 +47,8 @@ v20 修复：
 
 ## v19 修改内容
 
-- **全部 SDK 清除** — `com/kwad`（快手）、`com/bytedance`（字节跳动）、`com/baidu`（百度）、`com/tencent/bugly`、`com/qq/e`、`com/ss/android` 等 40,000+ 类完整剥离
-- **原生 .so 全清** — 34 个 native 库全部删除（libttmplayer、libdpsdk、libMNN、libcronet、libkwad…），APK 不含任何 .so → Android 16 arm64 兼容，无 32-bit-only 限制
+- **广告 SDK 链路切断** — 广告/搜题入口（`OooOOOO.smali` 开关、拍照搜题、版本检查回调）全部 patch；SDK 的 smali 类体未整包删除（dist APK 内仍在，见 PATCHES.md「没做但可以做的优化」第 1 条）
+- **原生 .so 全清** — 30 个 native 库全部删除（libttmplayer、libdpsdk、libMNN、libcronet、libkwad…），APK 不含任何 .so → 跨 ABI 兼容，无 32-bit-only 限制
 - **热启动 / 开屏广告关闭** — `OooOOOO.smali` 两个广告开关改为 `return false`
 - **拍照搜题完整移除** — 从入口按钮到底层 smali 全部清除（详见下方）
 - **上游版本更新链路切断** ⚠️ *v19 README 声称已切断，实际回调未触及。v20 修复*
@@ -66,8 +66,9 @@ v20 修复：
 | `smali_classes4/.../questionsearch/`（~100 个 .smali） | 拍照搜题全部 Activity 和功能类 |
 | `smali_classes4/.../camerasdk/ZybCameraSDKActivity.smali` | 相机 SDK 桥接 Activity |
 | `smali_classes6/`（整个目录） | v8 阶段添加的 3 个 AppCompatActivity 空桩，v19 不再需要 |
-| `CommonWebPictureBrowseActivity.smali` 及其子类 | 拍照搜题配套图片浏览页 |
 | `aaa/v1/SearchPicSearch.smali`、`UploadQuestion*.smali` | 搜题/上传请求 |
+
+注：`CommonWebPictureBrowseActivity.smali`、`CommonCacheHybridActivity.smali` 实际**保留在仓**（smali_classes4），只从 manifest 移除了注册。
 
 ### 已清除的 manifest 引用
 
@@ -75,7 +76,7 @@ v20 修复：
 - `CommonCacheHybridActivity`、`CommonWebPictureBrowseActivity`
 - `com.zybang.camera.*`（5 个 Activity）
 - `com.zybang.permission.*`（2 个 Activity）
-- `android.permission.CAMERA`、`android.hardware.camera` / `android.hardware.camera.autofocus`
+- **未删除**：`android.permission.CAMERA`、`android.hardware.camera`、`android.hardware.camera.autofocus` 仍保留在 manifest（平台通用声明；拍照搜题的 Activity 入口已从 manifest 移除）
 
 ### 业务代码引用已清理
 
@@ -93,15 +94,15 @@ wakeup-mod/
 │   └── WakeUp_6.1.06_original.apk
 ├── wakeup_decoded/                    # apktool 反编译（已修改）
 │   ├── AndroidManifest.xml
-│   ├── smali/ ~ smali_classes4/       # 剩余 smali
-│   └── res/
-├── wakeup_decoded.strip/              # 原始 apktool 解码备份（含完整 SDK + 拍照搜题，对照用）
-├── wakeup_java_source/                # jadx 反编译 Java 源码
+│   ├── apktool.yml
+│   ├── smali_classes3/  smali_classes4/   # 仅保留 patch 过的关键 smali（其余在 .gitignore 排除）
+│   └── (lib/ res/raw/ res/drawable-*/ res/mipmap-*/ 未入仓)
 ├── wakeup-android-project/            # Gradle 工程
 ├── dist/                              # 构建产物
-│   ├── WakeUp_6.1.06_noad.apk
-│   ├── WakeUp_6.1.06_nophoto.apk
+│   ├── WakeUp_6.1.06_noversion.apk    # v20 唯一出仓版
 │   └── debug.keystore
+├── docs/
+│   └── social-preview.png
 ├── PATCHES.md                         # smali 层修改明细
 └── README.md
 ```
@@ -117,9 +118,9 @@ wakeup-mod/
 | versionName | 6.1.06 |
 | minSdkVersion | 21 (Android 5.0) |
 | targetSdkVersion | 35 (Android 15) |
-| 签名 | v1 + v2 + v3 |
+| 签名 | APK Signing Block (v2/v3) + META-INF/WAKEUPMO.RSA (v1) |
 | keystore | `dist/debug.keystore` (alias: `wakeupmod`, pass: `wakeup123`) |
-| nophoto.apk 大小 | **24MB**（原版 32MB，noad 版 27MB） |
+| noversion.apk 大小 | **27MB**（原版 32MB） |
 | 原生库 | **不含任何 .so** → 全架构兼容 |
 
 ---
@@ -128,7 +129,9 @@ wakeup-mod/
 
 ### SDK 剥离
 
-删除所有第三方 SDK smali 类：
+manifest 清理：删除上表 SDK 对应的 `<activity>`、`<provider>`、`<service>`、`<receiver>` 声明（`com.zybang.camera.*`、`com.zybang.permission.*`、camerasdk/questionsearch 入口等全部移除）。
+
+注意：SDK 的 smali 类体未整包删除——dist 产物的 dex 中仍在（重打包沿用原 dex），见 PATCHES.md「没做但可以做的优化」第 1 条。文档早先版本声称"smali 整包删除"，与产物不符，特此更正。原清单：
 
 | 包 | SDK |
 |-----|-----|
@@ -163,9 +166,9 @@ wakeup-mod/
 
 ### Native 库删除
 
-`lib/` 下 34 个 .so 全部删除（约 12MB）。
+`lib/` 下 30 个 .so 全部删除（原 APK 单架构 armeabi-v7a，约 12MB）。
 
-**配套修改**：`NativeBlurProcess.smali`（enrique/stackblur）的 `<clinit>` 中 `loadLibrary("blur")` 改为空操作，`functionToBlur` 改为空方法。否则 UnsatisfiedLinkError 闪退。
+**配套修改**：`com/enrique/stackblur/NativeBlurProcess.smali` 的 `<clinit>` 改为空操作（`return-void`），`functionToBlur` 去掉 `.native` 修饰、改为返回 void。否则 UnsatisfiedLinkError 闪退。`com/suda/.../questionsearch/camera/blur/NativeBlurProcess.smali` 因 questionsearch 整目录删除而不存在，无需单独 patch。
 
 ---
 
@@ -173,7 +176,7 @@ wakeup-mod/
 
 ```bash
 # 必须先卸载原版（签名不同）
-adb install -r dist/WakeUp_6.1.06_nophoto.apk
+adb install -r dist/WakeUp_6.1.06_noversion.apk
 ```
 
 ### 源码编译
@@ -198,11 +201,12 @@ cd wakeup-android-project
 
 ## 工具链
 
-| 工具 | 版本 | 用途 |
-|------|------|------|
-| apktool | 2.12.0 | APK 反编译 / 重打包 |
-| jadx | 1.5.3 | Java 源码反编译 |
-| uber-apk-signer | 1.3.0 | v1+v2+v3 签名 |
-| zipalign | build-tools 35.0.0 | 4 字节对齐 |
-| compileSdk / targetSdk | 35 | Android 15 |
-| minSdkVersion | 21 | Android 5.0+ |
+| 工具 | 版本 | 用途 | 依据 |
+|------|------|------|------|
+| apktool | 2.12.0 | APK 反编译 / 重打包 | `wakeup_decoded/apktool.yml` 第 1 行 |
+| jadx | 1.5.3 | Java 源码反编译 | 自述，未入仓 |
+| uber-apk-signer | 1.3.0 | v1+v2+v3 签名 | 自述，未入仓（APK 内 META-INF/WAKEUPMO.* 命名印证） |
+| zipalign | build-tools 35.0.0 | 4 字节对齐 | 自述，未入仓 |
+| Gradle | 8.7 | Wrapper | `wakeup-android-project/gradle/wrapper/gradle-wrapper.properties` |
+| compileSdk / targetSdk | 35 | Android 15 | `wakeup-android-project/app/build.gradle.kts` |
+| minSdkVersion | 21 | Android 5.0+ | 同上 |
